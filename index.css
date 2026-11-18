@@ -1,0 +1,521 @@
+/* 1. Destaque principal (hero) */
+.destaque {
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(150deg, var(--marrom-escuro) 0%, var(--laranja) 100%);
+    color: var(--marrom-escuro);
+}
+
+
+.destaque::before {
+    top: -240px;
+    right: -140px;
+    width: 640px;
+    height: 640px;
+}
+
+.destaque::after {
+    right: 10%;
+    bottom: -370px;
+    width: 500px;
+    height: 500px;
+}
+
+.destaque_interno {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    gap: 50px;
+    align-items: center;
+    min-height: 540px;
+    padding-block: 76px;
+}
+
+.destaque_texto {
+    max-width: 650px;
+}
+
+.destaque .sobretitulo {
+    color: var(--texto-sobre-escuro);
+}
+
+.sobretitulo_ponto {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: var(--texto-sobre-escuro);
+}
+
+.destaque h1 {
+    max-width: 680px;
+    margin-bottom: 22px;
+    color: var(--branco);
+    font-size: clamp(42px, 5.2vw, 68px);
+    font-weight: 750;
+    line-height: 1.04;
+}
+
+.destaque_descricao {
+    max-width: 570px;
+    margin-bottom: 28px;
+    color: var(--texto-sobre-escuro);
+    font-size: 16px;
+}
+
+.destaque_acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.destaque_imagem {
+    display: grid;
+    place-items: center;
+}
+
+.destaque_imagem img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.22));
+}
+
+/* 2. Introdução */
+.secao_introducao {
+    padding-block: 82px;
+    background: var(--branco);
+}
+
+.introducao_grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 70px;
+}
+
+.introducao_grade h2 {
+    margin-bottom: 0;
+}
+
+.introducao_texto p {
+    margin-bottom: 22px;
+    color: var(--texto-suave);
+}
+
+/* 3. Cabeçalho de seção (compartilhado pelas seções abaixo) */
+.secao_cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 38px;
+}
+
+.secao_cabecalho h2 {
+    max-width: 620px;
+    margin-bottom: 0;
+}
+
+.secao_cabecalho > p {
+    max-width: 370px;
+    margin-bottom: 4px;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+/*faixa para divisoria*/
+.faixa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 6px 20px;
+    padding: 14px 24px 12px;
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(
+        90deg,
+        var(--laranja-suave) 0 32%,
+        var(--laranja) 32% 66%,
+        var(--verde) 66% 100%
+    ) 1;
+    background: var(--laranja-faixa);
+    color: var(--verde);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.faixa_estrela {
+    font-size: 14px;
+    letter-spacing: 0;
+}
+/* 4. Cartões "Conheça o tema" */
+.secao_problema {
+    background: var(--fundo);
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.cartao {
+    position: relative;
+    padding: 22px 24px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background: var(--branco);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.cartao_numero {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    color: var(--cinza-numero);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.cartao h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+
+.cartao p {
+    margin-bottom: 16px;
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.cartao a {
+    display: inline-flex;
+    gap: 10px;
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.cartao a:hover {
+    color: var(--laranja);
+}
+
+/* 5. Faixa de dados da pesquisa */
+.secao_dados {
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-escuro) 100%);
+    color: var(--branco);
+}
+
+.secao_dados .sobretitulo {
+    color: var(--laranja-suave);
+}
+
+.secao_cabecalho_claro h2 {
+    color: var(--branco);
+}
+
+.secao_cabecalho_claro > p {
+    color: var(--texto-sobre-escuro);
+}
+
+.dados_grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.15fr;
+    gap: 16px;
+}
+
+.dado {
+    min-height: 225px;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: var(--raio);
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.dado_numero {
+    margin-bottom: 8px;
+    color: var(--laranja-numero);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.dado_numero span {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+.dado h3 {
+    margin-bottom: 12px;
+    color: var(--branco);
+    font-size: 18px;
+    letter-spacing: -0.3px;
+}
+
+.dado > p:last-child {
+    margin-bottom: 0;
+    color: var(--texto-sobre-escuro);
+    font-size: 12px;
+}
+
+.dado_destaque {
+    background: var(--bege);
+}
+
+.dado_destaque h3 {
+    color: var(--verde-escuro);
+}
+
+.dado_destaque > p:last-child {
+    color: var(--texto-suave);
+}
+
+.dado_etiqueta {
+    margin-bottom: 20px;
+    color: var(--marrom);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+}
+
+/* 6. Passos práticos */
+.secao_passos {
+    background: var(--branco);
+}
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.passos_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 0;
+    border-top: 1px solid var(--borda);
+}
+
+.passos_numero {
+    display: grid;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--laranja-claro);
+    color: var(--marrom);
+    font-weight: 800;
+}
+
+.passos_item h3 {
+    margin: 4px 0 9px;
+    font-size: 18px;
+}
+
+.passos_item p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+/* 7. Chamada para participação */
+.secao_participar {
+    padding-top: 0;
+    background: var(--branco);
+}
+
+.participar_cartao {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 28px;
+    padding: 38px;
+    border-radius: var(--raio);
+    background: var(--laranja-claro);
+}
+
+.participar_texto h2 {
+    max-width: 650px;
+    margin-bottom: 12px;
+    font-size: clamp(26px, 3vw, 36px);
+}
+
+.participar_texto p:last-child {
+    max-width: 680px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.participar_cartao .botao {
+    white-space: nowrap;
+}
+
+/* 8. Links para as outras páginas */
+.secao_explorar {
+    background: var(--fundo);
+}
+
+.mais_grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.mais_cartao {
+    position: relative;
+    display: flex;
+    min-height: 145px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 22px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--branco);
+    text-decoration: none;
+    transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.mais_cartao:hover {
+    transform: translateY(-3px);
+    border-color: var(--laranja);
+}
+
+.mais_cartao > span:first-child {
+    color: var(--laranja);
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.mais_cartao h3 {
+    max-width: 240px;
+    margin: 0;
+    font-size: 17px;
+}
+
+.mais_seta {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: var(--verde);
+    font-size: 18px;
+}
+
+/* 9. Telas médias */
+@media (max-width: 1000px) {
+    .dados_grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dado_destaque {
+        grid-column: 1 / -1;
+    }
+}
+@media (max-width: 900px) {
+    .destaque_interno {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        min-height: 0;
+    }
+
+    .destaque_imagem img {
+        max-width: 280px;
+    }
+}
+/* 10. Celulares */
+@media (max-width: 700px) {
+    .destaque_interno {
+        padding-block: 44px 48px;
+    }
+
+    .destaque .sobretitulo {
+        letter-spacing: 1.4px;
+    }
+
+    .destaque h1 {
+        font-size: clamp(38px, 11.5vw, 54px);
+        letter-spacing: -1.4px;
+        overflow-wrap: break-word;
+    }
+
+    /* o laranja puro some sobre o degradê laranja do fundo */
+    .destaque h1 em {
+        color: var(--laranja-numero);
+    }
+
+    .destaque_acoes .botao {
+        flex: 1 1 100%;
+    }
+
+    .destaque_imagem img {
+        max-width: 220px;
+    }
+
+    .mais_cartao h3 {
+        padding-right: 30px;
+    }
+
+    .introducao_grade,
+    .cartoes,
+    .passos,
+    .mais_grade,
+    .dados_grade,
+    .participar_cartao {
+        grid-template-columns: 1fr;
+    }
+
+    .introducao_grade {
+        gap: 25px;
+    }
+
+    .secao_cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .secao_cabecalho > p {
+        max-width: 100%;
+    }
+
+    .dado_destaque {
+        grid-column: auto;
+    }
+
+    .passos {
+        gap: 0;
+    }
+
+    .participar_cartao {
+        gap: 20px;
+        padding: 26px;
+    }
+
+    .participar_cartao .botao {
+        justify-self: start;
+        white-space: normal;
+    }
+}
