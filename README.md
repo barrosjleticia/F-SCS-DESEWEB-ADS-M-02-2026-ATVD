@@ -65,11 +65,3 @@ A identidade visual do Bituca Zero utiliza uma combinação de verde, laranja, m
 
 - **Site publicado:** []
 - **Repositório GitHub:** []
-
-## 🌿 Nossa mensagem
-
-Uma bituca pode parecer pequena, mas seu impacto não é.
-
-O Bituca Zero acredita que a informação é o primeiro passo para a mudança. Descartar corretamente, compartilhar conhecimento e incentivar atitudes conscientes são ações que ajudam a construir um futuro mais sustentável.
-
-**Bituca no lugar certo. Meio ambiente mais protegido.** 🌎
