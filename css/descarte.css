@@ -1,0 +1,62 @@
+/* ===== Estilos desta página (antes ficavam em base.css) ===== */
+/* Componentes das páginas internas do Bituca Zero */
+.passo>b {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--laranja);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.passos-grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+.passo {
+    padding: 26px;
+    border-left: 4px solid var(--laranja);
+    border-radius: 0 16px 16px 0;
+    background: #fff;
+}
+.passo p {
+    color: var(--texto-suave);
+}
+@media (max-width: 600px) {
+    .passos-grade {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Evita os espaços exagerados que a justificação cria em colunas estreitas. */
+.passo p {
+    text-align: left;
+    text-wrap: pretty;
+}
+
+/* Faixas em degradê inspiradas na abertura da Home. */
+.pagina-topo-gradiente {
+    background: linear-gradient(150deg, var(--marrom-escuro) 0%, var(--laranja) 100%);
+    border-bottom: 0;
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 {
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 em {
+    color: #ffd0a7;
+}
+.pagina-topo-gradiente .sobretitulo {
+    color: #ffe0c5;
+}
+.pagina-topo-gradiente .container > p:not(.sobretitulo) {
+    color: #fff4e9;
+}
+
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+html.alto-contraste .pagina-topo-gradiente,
+html.alto-contraste .passo {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
+}

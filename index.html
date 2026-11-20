@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bituca Zero: informação e conscientização sobre o descarte correto de bitucas de cigarro e seus impactos ambientais.">
+    <meta name="theme-color" content="#315b3b">
+    <title>Bituca Zero | Bituca no lugar certo</title>
+
+    <!-- Estilos: base.css (cores, cabeçalho, rodapé) e index.css (esta página). -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="pagina_index">
+    <!-- Link de acessibilidade: permite pular diretamente para o conteúdo. -->
+    <a class="atalho-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
+
+    <!-- Cabeçalho com a marca e a navegação principal. -->
+    <header class="cabecalho">
+        <div class="container cabecalho_interno">
+            <a class="logo" href="index.html" aria-label="Bituca Zero — página inicial">
+                <span class="logo_texto">Bituca<strong>Zero</strong></span>
+            </a>
+
+            <!-- Os links apontam para as dez páginas planejadas para o site. -->
+            <button class="menu_toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+                <span class="menu_toggle_barras" aria-hidden="true"></span>
+            </button>
+            <nav class="menu" id="menu-principal" aria-label="Menu principal">
+                <ul class="menu_lista">                    <li><a href="index.html">Início</a></li>
+                    <li><a href="problema.html">O problema</a></li>
+                    <li><a href="descarte.html">Descarte correto</a></li>
+                    <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+                    <li><a href="objetivos.html">Objetivos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="calculadora.html">Calculadora</a></li>
+                    <li><a href="educacao.html">Educação</a></li>
+                    <li><a href="participe.html" class="menu_botao">Participe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página inicial. -->
+    <main id="conteudo">
+        <!-- Seção de destaque- apresenta o tema e encaminha para outras páginas. -->
+        <section class="destaque" aria-labelledby="titulo-destaque">
+            <div class="container destaque_interno">
+                <div class="destaque_texto">
+                    <p class="sobretitulo"><span class="sobretitulo_ponto" aria-hidden="true"></span> SUSTENTABILIDADE COMEÇA COM ATITUDE</p>
+                    <h1 id="titulo-destaque">Uma bituca parece pouco.<br><em>O impacto não.</em></h1>
+                    <p class="destaque_descricao">
+                        O que fica no chão não desaparece por mágica. Entenda os impactos das bitucas,
+                        descubra como descartá-las corretamente e ajude a construir cidades mais limpas.
+                    </p>
+                    <div class="destaque_acoes">
+                        <a class="botao botao_principal" href="problema.html">Conheça o problema <span aria-hidden="true"></span></a>
+                        <a class="botao botao_contorno" href="impacto.html">Veja o impacto</a>
+                    </div>
+                </div>
+                
+                <!-- Imagem  -->
+                <div class="destaque_imagem">
+                    <img src="img/bituca.png" alt="Ilustração de uma bituca de cigarro" width="400" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumo introdutório sobre a importância do tema. -->
+        <section class="secao secao_introducao" aria-labelledby="titulo-causa">
+            <div class="container introducao_grade">
+                <div>
+                    <p class="sobretitulo">POR QUE ISSO IMPORTA?</p>
+                    <h2 id="titulo-causa">Pequena no tamanho.<br><em>Persistente no ambiente.</em></h2>
+                </div>
+                <div class="introducao_texto">
+                    <p>
+                        Bitucas aparecem em calçadas, praças, praias e áreas verdes. A maior parte dos filtros é feita de acetato de celulose, um polímero plástico que pode persistir e se fragmentar em fibras menores. Depois do uso, o filtro também retém resíduos do tabaco e da fumaça, que podem ser liberados quando entram em contato com a água.
+                    </p>
+                    <a class="link-seta" href="problema.html">Entenda melhor o problema <span aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </section>
+
+        <!--faixa entre o inicio e a intro-->
+            <div class="faixa" aria-hidden="true">
+                <span>Repense</span><span class="faixa_estrela">|</span>
+                <span>Descarte</span><span class="faixa_estrela">|</span>
+                <span>Transforme</span><span class="faixa_estrela">|</span>
+                <span>Repense</span>
+            </div>
+
+        <!-- Cartões que apresentam os principais caminhos de navegação. -->
+        <section class="secao secao_problema" aria-labelledby="titulo-explorar">
+            <div class="container">
+                <div class="secao_cabecalho">
+                    <div>
+                        <p class="sobretitulo">01 | CONHEÇA O TEMA</p>
+                        <h2 id="titulo-explorar">Informação para <em>mudar hábitos.</em></h2>
+                    </div>
+                    <p>Conheça os impactos e descubra atitudes que ajudam a evitar que as bitucas cheguem ao ambiente.</p>
+                </div>
+
+                <div class="cartoes">
+                    <article class="cartao">
+                        <div class="cartao_visual"><img src="img/problematica-praia.jpg" alt="Imagem ilustrativa de bitucas espalhadas na areia de uma praia"><span>01 · Entenda o cenário</span></div>
+                        <span class="cartao_numero" aria-hidden="true"></span>
+                        <h3>Entenda o problema</h3>
+                        <p>Saiba do que as bitucas são feitas e como o descarte irregular afeta a água, o solo e os animais.</p>
+                        <a href="problema.html">Conhecer o tema <span aria-hidden="true"></span></a>
+                    </article>
+
+                    <article class="cartao">
+                        <div class="cartao_visual"><img src="img/problematica-bueiro-nova.jpg" alt="Imagem ilustrativa de bitucas próximas a um bueiro em uma rua molhada"><span>02 · Faça a diferença</span></div>
+                        <span class="cartao_numero" aria-hidden="true"></span>
+                        <h3>Descarte corretamente</h3>
+                        <p>Aprenda cuidados simples para evitar que o resíduo fique nas ruas ou seja levado pela chuva.</p>
+                        <a href="descarte.html">Ver orientações <span aria-hidden="true"></span></a>
+                    </article>
+
+                    <article class="cartao">
+                        <div class="cartao_visual"><img src="img/problematica-parque.jpg" alt="Imagem ilustrativa de bitucas abandonadas no gramado de um parque"><span>03 · Conheça os efeitos</span></div>
+                        <span class="cartao_numero" aria-hidden="true"></span>
+                        <h3>Veja o impacto</h3>
+                        <p>Explore estimativas reunidas pela equipe e compreenda a dimensão do descarte ao longo do tempo.</p>
+                        <a href="impacto.html">Explorar os dados <span aria-hidden="true"></span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dados do levantamento -->
+        <section class="secao secao_dados" aria-labelledby="titulo-dados">
+            <div class="container">
+                <div class="secao_cabecalho secao_cabecalho_claro">
+                    <div>
+                        <p class="sobretitulo">02 | O TAMANHO DO DESAFIO</p>
+                        <h2 id="titulo-dados">O impacto vai muito <em>além do chão.</em></h2>
+                    </div>
+                </div>
+
+                <div class="dados_grade">
+                    <article class="dado">
+                        <p class="dado_numero">4,5 <span>trilhões</span></p>
+                        <h3>de bitucas por ano</h3>
+                        <p>Estimativa de descarte anual no Brasil citada no levantamento da equipe.</p>
+                    </article>
+                    <article class="dado">
+                        <p class="dado_numero">14 <span>milhões</span></p>
+                        <h3>por dia em São Paulo</h3>
+                        <p>Estimativa diária de bitucas espalhadas na cidade, conforme a pesquisa reunida.</p>
+                    </article>
+                    <article class="dado dado_destaque">
+                        <p class="dado_etiqueta">ÁGUA E CONTAMINAÇÃO</p>
+                        <h3>As estimativas variam conforme o estudo.</h3>
+                        <p>O levantamento menciona valores de até 1 litro e até 2.500 litros de água por bituca. Consulte as fontes e as condições de cada estudo antes de comparar os resultados.</p>
+                    </article>
+                </div>
+                <a class="botao botao_claro" href="impacto.html">Explore os dados <span aria-hidden="true"></span></a>
+            </div>
+        </section>
+
+        <!-- Passos práticos para orientar o visitante. -->
+        <section class="secao secao_passos" aria-labelledby="titulo-participar">
+            <div class="container">
+                <div class="secao_cabecalho">
+                    <div>
+                        <p class="sobretitulo">03 | ATITUDE NO COTIDIANO</p>
+                        <h2 id="titulo-participar">Como você pode <em>participar?</em></h2>
+                    </div>
+                    <p>O cuidado começa com escolhas simples, informação confiável e responsabilidade compartilhada. Evitar o descarte no chão e nos bueiros ajuda a impedir que esse resíduo seja levado pela chuva até córregos, rios e praias.</p>
+                </div>
+
+                <ol class="passos">
+                    <li class="passos_item">
+                        <span class="passos_numero">1</span>
+                        <div>
+                            <h3>Apague com segurança</h3>
+                            <p>Certifique-se de que o cigarro esteja completamente apagado antes de descartar a bituca.</p>
+                        </div>
+                    </li>
+                    <li class="passos_item">
+                        <span class="passos_numero">2</span>
+                        <div>
+                            <h3>Use um recipiente adequado</h3>
+                            <p>Não jogue a bituca no chão, em bueiros ou em corpos d'água. Procure um coletor apropriado e siga as orientações locais.</p>
+                        </div>
+                    </li>
+                    <li class="passos_item">
+                        <span class="passos_numero">3</span>
+                        <div>
+                            <h3>Compartilhe informação</h3>
+                            <p>Converse sobre o tema e incentive ações de conscientização em sua comunidade.</p>
+                        </div>
+                    </li>
+                </ol>
+                <a class="link-seta" href="descarte.html">Ver todas as orientações de descarte <span aria-hidden="true"></span></a>
+            </div>
+        </section>
+
+        <!-- Chamada para participação da comunidade. -->
+        <section class="secao secao_participar" aria-labelledby="titulo-faca-parte">
+            <div class="container participar_cartao">
+                <div class="participar_texto">
+                    <p class="sobretitulo">04 | FAÇA PARTE</p>
+                    <h2 id="titulo-faca-parte">Uma cidade mais limpa começa com <em>gente consciente.</em></h2>
+                    <p>Compartilhe uma ideia, conte como o problema aparece no seu cotidiano ou sugira ações de conscientização para sua comunidade.</p>
+                </div>
+                <a class="botao botao_principal" href="participe.html">Participar do projeto <span aria-hidden="true"></span></a>
+            </div>
+        </section>
+
+        <!-- Área com links para as demais páginas do site. -->
+        <section class="secao secao_explorar" aria-labelledby="titulo-explorar-paginas">
+            <div class="container">
+                <div class="secao_cabecalho">
+                    <div>
+                        <p class="sobretitulo">EXPLORE O BITUCA ZERO</p>
+                        <h2 id="titulo-explorar-paginas">Conhecimento que vira <em>atitude.</em></h2>
+                    </div>
+                </div>
+
+                <div class="mais_grade">
+                    <a class="mais_cartao" href="sustentabilidade.html"><span>01</span><h3>Sustentabilidade nas cidades</h3><span class="mais_seta" aria-hidden="true">↗</span></a>
+                    <a class="mais_cartao" href="objetivos.html"><span>02</span><h3>Objetivos da iniciativa</h3><span class="mais_seta" aria-hidden="true">↗</span></a>
+                    <a class="mais_cartao" href="noticias.html"><span>03</span><h3>Notícias e destinação das bitucas</h3><span class="mais_seta" aria-hidden="true">↗</span></a>
+                    <a class="mais_cartao" href="calculadora.html"><span>04</span><h3>Calculadora ambiental</h3><span class="mais_seta" aria-hidden="true">↗</span></a>
+                    <a class="mais_cartao" href="educacao.html"><span>05</span><h3>Educação e conscientização</h3><span class="mais_seta" aria-hidden="true">↗</span></a>
+                    <a class="mais_cartao" href="descarte.html"><span>06</span><h3>Como realizar o descarte corretamente</h3><span class="mais_seta" aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé repetido nas páginas para manter a navegação consistente. -->
+    <footer class="rodape">
+        <div class="container rodape_interno">
+            <div class="rodape_marca">
+                <a class="logo logo_rodape" href="index.html" aria-label="Bituca Zero — página inicial">
+                    <span class="logo_texto">Bituca<strong>Zero</strong></span>
+                </a>
+                <p>Bituca no lugar certo.</p>
+                <p class="rodape_descricao">Um projeto acadêmico de conscientização ambiental.</p>
+            </div>
+
+            <nav class="rodape_nav" aria-label="Navegação do rodapé">
+                <p class="rodape_titulo">Navegue</p>
+                <ul class="rodape_links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="problema.html">O problema</a></li>
+                    <li><a href="descarte.html">Descarte correto</a></li>
+                    <li><a href="sustentabilidade.html">Sustentabilidade</a></li>
+                    <li><a href="objetivos.html">Objetivos</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="calculadora.html">Calculadora</a></li>
+                    <li><a href="educacao.html">Educação</a></li>
+                    <li><a href="participe.html">Participe</a></li>
+                </ul>
+            </nav>
+
+            <div class="rodape_projeto">
+                <p class="rodape_titulo">Projeto acadêmico</p>
+                <p>Desenvolvido para a disciplina de Desenvolvimento Web.</p>
+                <p>FATEC Antonio Russo · 2026</p>
+            </div>
+        </div>
+        <div class="container rodape_final">
+            <p>&copy; 2026 Bituca Zero. Projeto acadêmico para fins educativos.</p>
+            <a href="#conteudo">Voltar ao início ↑</a>
+        </div>
+    </footer>
+    <div id="acesso">
+        <button id="abrir" type="button" aria-expanded="false" aria-controls="painel" aria-label="Abrir painel de acessibilidade">A+</button>
+        <section id="painel" role="dialog" aria-labelledby="titulo-acessibilidade" hidden>
+            <h2 id="titulo-acessibilidade">Acessibilidade</h2>
+            <div role="group" aria-label="Tamanho do texto">
+                <span>Tamanho do texto</span>
+                <button type="button" data-acao="fonte-menos" aria-label="Diminuir texto">A−</button>
+                <button type="button" data-acao="fonte-mais" aria-label="Aumentar texto">A+</button>
+            </div>
+            <div role="group" aria-label="Opções visuais">
+                <button type="button" data-toggle="alto-contraste" aria-pressed="false">Alto contraste</button>
+                <button type="button" data-toggle="escala-cinza" aria-pressed="false">Tons de cinza</button>
+                <button type="button" data-toggle="fonte-legivel" aria-pressed="false">Fonte legível</button>
+                <button type="button" data-toggle="destacar-links" aria-pressed="false">Destacar links</button>
+                <button type="button" data-toggle="espacamento" aria-pressed="false">Mais espaçamento</button>
+                <button type="button" data-acao="daltonismo" aria-pressed="false">Modo daltônico: desligado</button>
+            </div>
+            <button type="button" class="a11y-reset" data-acao="reset" aria-live="polite">Restaurar padrão</button>
+        </section>
+        <svg aria-hidden="true" focusable="false">
+            <defs>
+                <filter id="filtro-protanopia"><feColorMatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"/></filter>
+                <filter id="filtro-deuteranopia"><feColorMatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"/></filter>
+                <filter id="filtro-tritanopia"><feColorMatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"/></filter>
+            </defs>
+        </svg>
+    </div>
+    <script src="js/menu.js" defer></script>
+    <script src="js/acessibilidade.js" defer></script>
+</body>
+</html>

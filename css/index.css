@@ -1,0 +1,962 @@
+/* 1. Destaque principal (hero) */
+
+/* ===== Estilos desta página (antes ficavam em base.css) ===== */
+/* 4. Botões e links com seta */
+.botao_principal {
+    background: var(--laranja);
+    color: var(--texto-botao);
+}
+.botao_principal:hover {
+    background: var(--laranja-hover);
+}
+.botao_contorno {
+    border-color: rgba(255, 255, 255, 0.38);
+    color: var(--branco);
+}
+.botao_contorno:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+.botao_claro {
+    margin-top: 28px;
+    background: var(--branco);
+    color: var(--verde-escuro);
+}
+.link-seta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--verde);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+.link-seta:hover {
+    color: var(--laranja);
+}
+
+/* Alinhamento editorial: títulos e introduções centralizados; textos longos com leitura natural. */
+.secao_cabecalho {
+    align-items: center;
+}
+.secao_cabecalho > div {
+    text-align: center;
+}
+.secao_cabecalho > div .sobretitulo {
+    text-align: center;
+}
+.secao_cabecalho > p {
+    margin-inline: auto;
+    text-align: center;
+    text-wrap: pretty;
+}
+
+/* Evita os espaços exagerados que a justificação cria em colunas estreitas. */
+.cartao p {
+    text-align: left;
+    text-wrap: pretty;
+}
+
+/* Imagens reais/ilustrativas da problemática nas capas dos cartões. */
+.cartao_visual {
+    position: relative;
+    min-height: 180px;
+    overflow: hidden;
+    isolation: isolate;
+    background: transparent;
+}
+.cartao_visual img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cartao_visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(22, 31, 23, .78), rgba(22, 31, 23, .08));
+}
+.cartao_visual span {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0,0,0,.35);
+}
+
+/* A calculadora ganha uma área verde, mantendo o formulário claro e legível. */
+@media (max-width: 800px) {
+    .secao_cabecalho {
+        align-items: flex-start;
+    }
+}
+
+/* Home: mantém os dois CTAs originais lado a lado e com seus estilos próprios. */
+.pagina_index .destaque_acoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.pagina_index .destaque_acoes .botao {
+    flex: 0 0 auto;
+    min-height: 48px;
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-size: 0.8125rem;
+    text-align: center;
+    white-space: nowrap;
+}
+.pagina_index .destaque_acoes .botao_principal {
+    background: var(--laranja);
+    color: var(--texto-botao);
+    border: 1px solid transparent;
+}
+.pagina_index .destaque_acoes .botao_contorno {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.48);
+    color: var(--branco);
+}
+@media (max-width: 700px) {
+    .pagina_index .destaque_acoes .botao { flex: 0 1 auto; }
+}
+
+/* Correção de alinhamento editorial em todas as páginas. */
+.secao_cabecalho > div h2 {
+    text-wrap: balance;
+}
+
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+html.alto-contraste .cartao {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
+}
+
+/* ===== Ajustes específicos adicionais ===== */
+.destaque {
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(150deg, var(--marrom-escuro) 0%, var(--laranja) 100%);
+    color: var(--marrom-escuro);
+}
+
+
+.destaque::before {
+    top: -240px;
+    right: -140px;
+    width: 640px;
+    height: 640px;
+}
+
+.destaque::after {
+    right: 10%;
+    bottom: -370px;
+    width: 500px;
+    height: 500px;
+}
+
+.destaque_interno {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    gap: 50px;
+    align-items: center;
+    min-height: 540px;
+    padding-block: 76px;
+}
+
+.destaque_texto {
+    max-width: 650px;
+}
+
+.destaque .sobretitulo {
+    color: var(--texto-sobre-escuro);
+}
+
+.sobretitulo_ponto {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: var(--texto-sobre-escuro);
+}
+
+.destaque h1 {
+    max-width: 680px;
+    margin-bottom: 22px;
+    color: var(--branco);
+    font-size: clamp(2.625rem, 5.2vw, 4.25rem);
+    font-weight: 750;
+    line-height: 1.04;
+}
+
+.destaque_descricao {
+    max-width: 570px;
+    margin-bottom: 28px;
+    color: var(--texto-sobre-escuro);
+    font-size: 1rem;
+}
+
+.destaque_acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.destaque_imagem {
+    display: grid;
+    place-items: center;
+}
+
+.destaque_imagem img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.22));
+}
+
+/* 2. Introdução */
+.secao_introducao {
+    padding-block: 82px;
+    background: var(--branco);
+}
+
+.introducao_grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 70px;
+}
+
+.introducao_grade h2 {
+    margin-bottom: 0;
+}
+
+.introducao_texto p {
+    margin-bottom: 22px;
+    color: var(--texto-suave);
+}
+
+/* 3. Cabeçalho de seção (compartilhado pelas seções abaixo) */
+.secao_cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 38px;
+}
+
+.secao_cabecalho h2 {
+    max-width: 620px;
+    margin-bottom: 0;
+}
+
+.secao_cabecalho > p {
+    max-width: 370px;
+    margin-bottom: 4px;
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+}
+/*faixa para divisoria*/
+.faixa {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 6px 20px;
+    padding: 14px 24px 12px;
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(
+        90deg,
+        var(--laranja-suave) 0 32%,
+        var(--laranja) 32% 66%,
+        var(--verde) 66% 100%
+    ) 1;
+    background: var(--laranja-faixa);
+    color: var(--verde);
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.faixa_estrela {
+    font-size: 0.875rem;
+    letter-spacing: 0;
+}
+/* 4. Cartões "Conheça o tema" */
+.secao_problema {
+    background: var(--fundo);
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.cartao {
+    position: relative;
+    padding: 22px 24px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background: var(--branco);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.cartao_numero {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    color: var(--cinza-numero);
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.cartao h3 {
+    margin-bottom: 10px;
+    font-size: 1.125rem;
+    letter-spacing: -0.5px;
+}
+
+.cartao p {
+    margin-bottom: 16px;
+    color: var(--texto-suave);
+    font-size: 0.75rem;
+}
+
+.cartao a {
+    display: inline-flex;
+    gap: 10px;
+    color: var(--verde);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.cartao a:hover {
+    color: var(--laranja);
+}
+
+/* 5. Faixa de dados da pesquisa */
+.secao_dados {
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-escuro) 100%);
+    color: var(--branco);
+}
+
+.secao_dados .sobretitulo {
+    color: var(--laranja-suave);
+}
+
+.secao_cabecalho_claro h2 {
+    color: var(--branco);
+}
+
+.secao_cabecalho_claro > p {
+    color: var(--texto-sobre-escuro);
+}
+
+.dados_grade {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.15fr;
+    gap: 16px;
+}
+
+.dado {
+    min-height: 225px;
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: var(--raio);
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.dado_numero {
+    margin-bottom: 8px;
+    color: var(--laranja-numero);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.dado_numero span {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+.dado h3 {
+    margin-bottom: 12px;
+    color: var(--branco);
+    font-size: 1.125rem;
+    letter-spacing: -0.3px;
+}
+
+.dado > p:last-child {
+    margin-bottom: 0;
+    color: var(--texto-sobre-escuro);
+    font-size: 0.75rem;
+}
+
+.dado_destaque {
+    background: var(--bege);
+}
+
+.dado_destaque h3 {
+    color: var(--verde-escuro);
+}
+
+.dado_destaque > p:last-child {
+    color: var(--texto-suave);
+}
+
+.dado_etiqueta {
+    margin-bottom: 20px;
+    color: var(--marrom);
+    font-size: 0.625rem;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+}
+
+/* 6. Passos práticos */
+.secao_passos {
+    background: var(--branco);
+}
+
+.passos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.passos_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 0;
+    border-top: 1px solid var(--borda);
+}
+
+.passos_numero {
+    display: grid;
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--laranja-claro);
+    color: var(--marrom);
+    font-weight: 800;
+}
+
+.passos_item h3 {
+    margin: 4px 0 9px;
+    font-size: 1.125rem;
+}
+
+.passos_item p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 0.8125rem;
+}
+
+/* 7. Chamada para participação */
+.secao_participar {
+    padding-top: 0;
+    background: var(--branco);
+}
+
+.participar_cartao {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 28px;
+    padding: 38px;
+    border-radius: var(--raio);
+    background: var(--laranja-claro);
+}
+
+.participar_texto h2 {
+    max-width: 650px;
+    margin-bottom: 12px;
+    font-size: clamp(1.625rem, 3vw, 2.25rem);
+}
+
+.participar_texto p:last-child {
+    max-width: 680px;
+    margin-bottom: 0;
+    color: var(--texto-suave);
+    font-size: 0.8125rem;
+}
+
+.participar_cartao .botao {
+    white-space: nowrap;
+}
+
+/* 8. Links para as outras páginas */
+.secao_explorar {
+    background: var(--fundo);
+}
+
+.mais_grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.mais_cartao {
+    position: relative;
+    display: flex;
+    min-height: 145px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 22px;
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    background: var(--branco);
+    text-decoration: none;
+    transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.mais_cartao:hover {
+    transform: translateY(-3px);
+    border-color: var(--laranja);
+}
+
+.mais_cartao > span:first-child {
+    color: var(--laranja);
+    font-size: 0.6875rem;
+    font-weight: 900;
+}
+
+.mais_cartao h3 {
+    max-width: 240px;
+    margin: 0;
+    font-size: 1.0625rem;
+}
+
+.mais_seta {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: var(--verde);
+    font-size: 1.125rem;
+}
+
+/* 9. Telas médias */
+@media (max-width: 1000px) {
+    .dados_grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dado_destaque {
+        grid-column: 1 / -1;
+    }
+}
+@media (max-width: 900px) {
+    .destaque_interno {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+        min-height: 0;
+    }
+
+    .destaque_imagem img {
+        max-width: 280px;
+    }
+}
+/* 10. Celulares */
+@media (max-width: 700px) {
+    .destaque_interno {
+        padding-block: 44px 48px;
+    }
+
+    .destaque .sobretitulo {
+        letter-spacing: 1.4px;
+    }
+
+    .destaque h1 {
+        font-size: clamp(2.375rem, 11.5vw, 3.375rem);
+        letter-spacing: -1.4px;
+        overflow-wrap: break-word;
+    }
+
+    /* o laranja puro some sobre o degradê laranja do fundo */
+    .destaque h1 em {
+        color: var(--laranja-numero);
+    }
+
+    .destaque_acoes .botao {
+        flex: 1 1 100%;
+    }
+
+    .destaque_imagem img {
+        max-width: 220px;
+    }
+
+    .mais_cartao h3 {
+        padding-right: 30px;
+    }
+
+    .introducao_grade,
+    .cartoes,
+    .passos,
+    .mais_grade,
+    .dados_grade,
+    .participar_cartao {
+        grid-template-columns: 1fr;
+    }
+
+    .introducao_grade {
+        gap: 25px;
+    }
+
+    .secao_cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .secao_cabecalho > p {
+        max-width: 100%;
+    }
+
+    .dado_destaque {
+        grid-column: auto;
+    }
+
+    .passos {
+        gap: 0;
+    }
+
+    .participar_cartao {
+        gap: 20px;
+        padding: 26px;
+    }
+
+    .participar_cartao .botao {
+        justify-self: start;
+        white-space: normal;
+    }
+}
+
+/* Ajuste solicitado: imagem à esquerda e texto à direita na abertura. */
+@media (min-width: 901px) {
+    .destaque_imagem {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .destaque_texto {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+    }
+}
+
+/* Cartões com área visual superior, seguindo a referência enviada. */
+.cartoes {
+    align-items: stretch;
+}
+
+.cartao {
+    display: flex;
+    min-height: 310px;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+}
+
+.cartao_visual {
+    display: flex;
+    min-height: 142px;
+    align-items: flex-end;
+    padding: 20px 22px;
+    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-escuro) 100%);
+    color: var(--branco);
+}
+
+.cartao:nth-child(2) .cartao_visual {
+    background: linear-gradient(135deg, #9a542b 0%, #c77a3e 100%);
+}
+
+.cartao:nth-child(3) .cartao_visual {
+    background: linear-gradient(135deg, #493226 0%, #805033 100%);
+}
+
+.cartao_visual span {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.cartao_numero {
+    display: none;
+}
+
+.cartao h3,
+.cartao p,
+.cartao a {
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+.cartao h3 {
+    margin-top: 20px;
+}
+
+.cartao p {
+    flex: 1;
+}
+
+.cartao a {
+    align-self: flex-start;
+    margin-top: 8px;
+    margin-bottom: 22px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    background: var(--verde);
+    color: var(--branco);
+}
+
+.cartao a:hover {
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+@media (max-width: 900px) {
+    .destaque_interno {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .destaque_texto,
+    .destaque_imagem {
+        width: 100%;
+    }
+
+    .destaque_imagem img {
+        max-width: 340px;
+    }
+}
+
+
+/* Ajuste fino: cartões alinhados e imagens distintas sem alterar os botões da Home. */
+.cartoes {
+    align-items: stretch;
+}
+.cartao {
+    height: 100%;
+}
+.cartao_visual {
+    min-height: 190px;
+    flex: 0 0 190px;
+}
+.cartao_visual img {
+    object-position: center;
+}
+.cartao h3 {
+    line-height: 1.2;
+}
+.cartao p {
+    line-height: 1.65;
+}
+.introducao_grade {
+    align-items: center;
+}
+.introducao_texto p {
+    text-align: justify;
+}
+.destaque_descricao {
+    text-align: justify;
+}
+@media (min-width: 901px) {
+  .destaque_interno { grid-template-columns: minmax(0,.95fr) minmax(0,1.05fr); gap: 64px; }
+  .destaque_imagem img { max-width: 460px; }
+  .destaque_texto { max-width: 640px; }
+}
+
+
+/* CORREÇÃO DEFINITIVA — abertura da Home e alinhamento dos textos */
+@media (min-width: 901px) {
+    .destaque_interno {
+        display: grid;
+        grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+        gap: clamp(34px, 5vw, 72px);
+        align-items: center;
+    }
+    .destaque_imagem { grid-column: 1; grid-row: 1; }
+    .destaque_texto {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: stretch;
+        width: 100%;
+        max-width: 700px;
+    }
+    .destaque h1 {
+        max-width: 700px;
+        font-size: clamp(3rem, 4.15vw, 3.75rem);
+        line-height: 1.06;
+        letter-spacing: -1.7px;
+        text-wrap: balance;
+    }
+    .destaque_descricao {
+        max-width: 620px;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        text-align-last: left;
+        word-spacing: normal;
+        letter-spacing: normal;
+    }
+}
+
+/* Os textos corridos não devem ser esticados entre as margens. */
+.introducao_texto p,
+.destaque_descricao,
+.cartao p,
+.passos_item p,
+.participar_texto > p:not(.sobretitulo) {
+    text-align: left;
+    text-align-last: left;
+    word-spacing: normal;
+    text-wrap: pretty;
+}
+
+/* Os dois botões da abertura permanecem juntos, com tamanho natural. */
+.pagina_index .destaque_acoes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 12px;
+}
+.pagina_index .destaque_acoes .botao {
+    flex: 0 0 auto;
+    width: auto;
+    min-height: 50px;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .destaque_interno {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+    .destaque_texto { width: 100%; max-width: 720px; }
+    .destaque h1 { max-width: 720px; text-wrap: balance; }
+    .destaque_descricao { text-align: left; }
+}
+@media (max-width: 520px) {
+    .pagina_index .destaque_acoes { flex-wrap: wrap; }
+    .pagina_index .destaque_acoes .botao { flex: 1 1 100%; }
+}
+
+/* Padronização de escala da Home com as páginas internas.
+   Mantém o conteúdo e a composição, reduzindo apenas a altura excessiva da abertura. */
+@media (min-width: 901px) {
+    .pagina_index .destaque_interno {
+        min-height: 430px;
+        padding-block: 38px;
+        align-items: center;
+    }
+
+    .pagina_index .destaque h1 {
+        font-size: clamp(2.625rem, 3.8vw, 3.625rem);
+        line-height: 1.06;
+    }
+
+    .pagina_index .destaque_imagem img {
+        max-width: 390px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+    .pagina_index .destaque_interno {
+        min-height: 0;
+        padding-block: 48px;
+    }
+}
+
+/* Padronização final da dimensão da Home em relação às demais páginas.
+   Aumenta a área útil do destaque sem alterar os botões originais. */
+@media (min-width: 901px) {
+    .pagina_index .destaque_interno {
+        width: min(1280px, calc(100% - 64px));
+        max-width: 1280px;
+        min-height: 600px;
+        padding-block: 72px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(48px, 5vw, 76px);
+        align-items: center;
+    }
+
+    .pagina_index .destaque_imagem {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+    }
+
+    .pagina_index .destaque_imagem img {
+        width: 100%;
+        max-width: 500px;
+        max-height: 500px;
+        object-fit: contain;
+    }
+
+    .pagina_index .destaque_texto {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: stretch;
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .pagina_index .destaque h1 {
+        max-width: 650px;
+        font-size: clamp(3.125rem, 4.2vw, 4.25rem);
+        line-height: 1.06;
+        letter-spacing: -1.5px;
+        text-wrap: initial;
+    }
+
+    .pagina_index .destaque_descricao {
+        max-width: 620px;
+        text-align: left;
+        text-align-last: left;
+        word-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.7;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+    .pagina_index .destaque_interno {
+        width: min(100% - 48px, 760px);
+        min-height: 0;
+        padding-block: 64px;
+        gap: 28px;
+    }
+}

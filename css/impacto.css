@@ -1,0 +1,97 @@
+/* ===== Estilos desta página (antes ficavam em base.css) ===== */
+/* 4. Botões e links com seta */
+.botao_claro {
+    margin-top: 28px;
+    background: var(--branco);
+    color: var(--verde-escuro);
+}
+
+/* Componentes das páginas internas do Bituca Zero */
+.painel-verde {
+    background: var(--verde-escuro);
+    color: #fff;
+    border-color: var(--verde-escuro);
+}
+.painel-verde h3 {
+    color: #fff;
+}
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 32px 0;
+}
+.cartao-info {
+    padding: 26px;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background: #fff;
+}
+.cartao-info>span {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--laranja);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.cartao-info h3 {
+    margin-bottom: 10px;
+}
+.cartao-info p {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+}
+@media (max-width: 800px) {
+    .grade-cartoes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .grade-cartoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Evita os espaços exagerados que a justificação cria em colunas estreitas. */
+.cartao-info p {
+    text-align: left;
+    text-wrap: pretty;
+}
+
+/* Faixas em degradê inspiradas na abertura da Home. */
+.pagina-topo-gradiente {
+    background: linear-gradient(150deg, var(--marrom-escuro) 0%, var(--laranja) 100%);
+    border-bottom: 0;
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 {
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 em {
+    color: #ffd0a7;
+}
+.pagina-topo-gradiente .sobretitulo {
+    color: #ffe0c5;
+}
+.pagina-topo-gradiente .container > p:not(.sobretitulo) {
+    color: #fff4e9;
+}
+
+/* Correção de alinhamento editorial em todas as páginas. */
+.painel p,
+.cartao-info p {
+    text-align: left;
+    text-align-last: left;
+    word-spacing: normal;
+    text-wrap: pretty;
+}
+
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+html.alto-contraste .pagina-topo-gradiente,
+html.alto-contraste .painel-verde,
+html.alto-contraste .cartao-info {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
+}

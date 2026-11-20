@@ -1,0 +1,218 @@
+/* ===== Estilos desta página (antes ficavam em base.css) ===== */
+/* 4. Botões e links com seta */
+.botao_principal {
+    background: var(--laranja);
+    color: var(--texto-botao);
+}
+.botao_principal:hover {
+    background: var(--laranja-hover);
+}
+
+/* Componentes das páginas internas do Bituca Zero */
+.contato-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    gap: 34px;
+    align-items: stretch;
+}
+.form-card {
+    padding: 32px;
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: var(--sombra);
+}
+label {
+    display: block;
+    margin: 14px 0 7px;
+    color: var(--verde-escuro);
+    font-weight: 700;
+}
+input:not([type=checkbox]),
+select,
+textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #bac6b9;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--texto);
+    font: inherit;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(233, 133, 56, .25);
+    border-color: var(--laranja);
+}
+.ajuda-campo {
+    margin: 8px 0 18px;
+    color: var(--texto-suave);
+    font-size: 0.8125rem;
+}
+.consentimento {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 18px 0;
+    font-size: 0.8125rem;
+    color: var(--texto-suave);
+}
+.consentimento input {
+    margin-top: 5px;
+}
+.retorno-formulario {
+    margin-top: 15px;
+    color: var(--verde);
+    font-weight: 700;
+}
+@media (max-width: 800px) {
+    .contato-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+@media (max-width: 600px) {
+    .form-card {
+        padding: 22px;
+    }
+}
+
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+html.alto-contraste .form-card,
+html.alto-contraste input,
+html.alto-contraste select,
+html.alto-contraste textarea {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
+}
+html.alto-contraste label {
+    color: #fff !important;
+}
+html.fonte-legivel input,
+html.fonte-legivel select,
+html.fonte-legivel textarea {
+    font-family: Verdana, Arial, sans-serif;
+    letter-spacing: 0.03em;
+}
+
+/* ===== Ajustes específicos adicionais ===== */
+/* ===== Cena da bituca: cigarro parado; ao enviar, vai para a lixeira ===== */
+.cena-bituca {
+    position: relative;
+    height: 250px;
+    margin-top: 26px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.cena-peca {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    z-index: 2;
+    width: min(28%, 135px);
+    aspect-ratio: 560 / 530;
+}
+.cena-peca img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Lixeira (tampa sempre aberta) */
+.cena-lixeira {
+    position: absolute;
+    right: 12%;
+    bottom: 0;
+    z-index: 3;
+    width: 140px;
+    height: auto;
+    overflow: visible;
+}
+.cena-tampa {
+    transform-origin: 12px 19px;
+    transform: rotate(-62deg);
+}
+
+.cena-legenda {
+    position: absolute;
+    left: 0;
+    bottom: 14px;
+    max-width: calc(100% - 170px);
+    margin: 0;
+    color: var(--verde);
+    font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    opacity: 0;
+}
+
+/* Ao enviar: o cigarro só desliza até a lixeira */
+.cena-bituca.cena-enviando .cena-peca {
+    animation: bituca-vai 0.9s ease-in forwards;
+}
+.cena-bituca.cena-enviando .cena-tampa {
+    animation: tampa-fecha 0.35s ease-in-out 0.85s forwards;
+}
+.cena-bituca.cena-enviando .cena-legenda {
+    animation: legenda-entra 0.4s ease-out 1.25s forwards;
+}
+@keyframes tampa-fecha {
+    from { transform: rotate(-62deg); }
+    to   { transform: rotate(0deg); }
+}
+@keyframes tampa-abre {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-62deg); }
+}
+@keyframes bituca-vai {
+    0%   { transform: translate(0, 0) scale(1); opacity: 1; }
+    85%  { opacity: 1; }
+    100% { transform: translate(var(--dx, 200px), var(--dy, 80px)) scale(0.3); opacity: 0; }
+}
+@keyframes legenda-entra {
+    to { opacity: 1; }
+}
+
+/* Volta quando a pessoa edita o formulário de novo */
+.cena-bituca.cena-volta .cena-peca {
+    animation: bituca-volta 0.4s ease-out;
+}
+.cena-bituca.cena-volta .cena-tampa {
+    animation: tampa-abre 0.3s ease-out;
+}
+@keyframes bituca-volta {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+    .cena-bituca { max-width: 460px; margin-inline: auto; }
+    .cena-peca { width: min(32%, 120px); }
+    .cena-lixeira { width: 120px; right: 6%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cena-bituca.cena-enviando .cena-peca { animation: none; opacity: 0; }
+    .cena-bituca.cena-enviando .cena-tampa { animation: none; transform: rotate(0deg); }
+    .cena-bituca.cena-enviando .cena-legenda { animation: none; opacity: 1; }
+}
+
+/* Botão "Limpar dados salvos" (fundo claro do cartão do formulário) */
+.form-card .botao {
+    margin: 8px 10px 0 0;
+}
+
+.botao_limpar {
+    background: transparent;
+    border-color: var(--verde);
+    color: var(--verde);
+    cursor: pointer;
+}
+
+.botao_limpar:hover {
+    background: rgba(49, 91, 59, 0.08);
+}

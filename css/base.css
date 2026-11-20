@@ -1,0 +1,746 @@
+/* 1. Variáveis (paleta, medidas) */
+:root {
+    /* Cores principais */
+    --verde: #315b3b;
+    --verde-escuro: #203f2a;
+    --verde-rodape: #1d3524;
+    --laranja: #e98538;
+    --laranja-hover: #f39a50;
+    --laranja-claro: #f8e5d4;
+    --laranja-suave: #ffc18b;      /* destaques sobre fundo escuro */
+    --laranja-numero: #ffd0a7;     /* números grandes sobre fundo verde */
+    --laranja-faixa: #f29a38;      /* faixa "Repense · Descarte · Transforme" */
+    --marrom: #76513d;
+    --marrom-escuro: #352217;
+    --branco: #ffffff;
+    --bege: #f6f0e6;
+
+    /* Textos */
+    --texto: #27332a;
+    --texto-suave: #647067;
+    --texto-menu: #4c5a4f;
+    --texto-botao: #2d241d;
+    --texto-sobre-escuro: #dbe4d9;        /* texto claro sobre verde */
+    --texto-sobre-escuro-suave: #b9c9b9;  /* texto secundário sobre verde */
+
+    /* Fundos, bordas e efeitos */
+    --fundo: #f8f8f3;
+    --borda: #dce2d9;
+    --cinza-numero: #a6afa5;
+    --sombra: 0 18px 45px rgba(32, 63, 42, 0.09);
+    --raio: 22px;
+    --largura: 1160px;
+}
+
+/* Respeita o tamanho declarado dos elementos. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+img,
+svg {
+    max-width: 100%;
+}
+a {
+    color: inherit;
+}
+a:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 4px;
+}
+.container {
+    width: min(var(--largura), calc(100% - 48px));
+    margin-inline: auto;
+}
+
+/* Link de acessibilidade */
+.atalho-conteudo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 10px 14px;
+    transform: translateY(-160%);
+    border-radius: 8px;
+    background: var(--branco);
+    color: var(--verde-escuro);
+    font-weight: 700;
+}
+.atalho-conteudo:focus {
+    transform: translateY(0);
+}
+
+/* 2. Cabeçalho, marca e menu */
+.cabecalho {
+    position: relative;
+    padding-block: 2px;
+    z-index: 10;
+    background: var(--bege);
+    border-bottom: 1px solid rgba(216, 237, 221, 0.12);
+    box-shadow: 0 20px 28px rgba(223, 113, 28, 0.22);
+}
+.cabecalho_interno {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 26px;
+    min-height: 88px;
+    padding-block: 16px;
+}
+.logo {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    color: var(--verde-escuro);
+    text-decoration: none;
+}
+.logo_texto {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.logo_texto strong {
+    color: var(--laranja);
+}
+.logo_rodape {
+    margin-bottom: 18px;
+}
+.logo_rodape,
+.logo_rodape .logo_texto {
+    color: var(--branco);
+}
+.menu {
+    min-width: 0;
+}
+.menu_lista {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px 16px;
+    margin: 0;
+    padding: 4px 4px 4px 22px;
+    list-style: none;
+    background: var(--marrom-escuro);
+    border: 0.5px solid var(--bege);
+    border-radius: 999px;
+    box-shadow: 0 15px 35px rgba(74, 51, 40, 0.35);
+}
+.menu_lista a {
+    display: inline-block;
+    padding: 7px 0;
+    color: var(--laranja-numero);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+.menu_lista a:hover,
+.menu_lista a[aria-current="page"] {
+    color: var(--laranja);
+}
+
+/* Botão "Participe" no menu (verde, arredondado). */
+.menu_lista a.menu_botao {
+    padding: 11px 26px;
+    border-radius: 999px;
+    background: var(--verde);
+    color: var(--branco);
+    font-size: 0.8125rem;
+    transition: background 160ms ease, transform 160ms ease;
+}
+.menu_lista a.menu_botao:hover {
+    transform: translateY(-2px);
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+
+/* 3. Tipografia compartilhada */
+.secao {
+    padding-block: 90px;
+}
+.sobretitulo {
+    margin: 0 0 15px;
+    color: var(--laranja);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1.5;
+}
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+h1,
+h2,
+h3 {
+    color: var(--verde-escuro);
+    line-height: 1.12;
+}
+h1,
+h2 {
+    letter-spacing: -1.8px;
+}
+h2 {
+    margin-bottom: 18px;
+    font-size: clamp(1.875rem, 4vw, 2.875rem);
+    font-weight: 750;
+}
+h1 em,
+h2 em {
+    color: var(--laranja);
+    font-style: normal;
+}
+
+/* 4. Botões e links com seta */
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 160ms ease, background 160ms ease;
+}
+.botao:hover {
+    transform: translateY(-2px);
+}
+
+/* 5. Rodapé */
+.rodape {
+    padding-top: 30px;
+    background: var(--verde-rodape);
+    color: var(--texto-sobre-escuro);
+}
+.rodape_interno {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 0.9fr;
+    gap: 30px;
+    padding-bottom: 5px;
+}
+.rodape_marca > p,
+.rodape_projeto > p:not(.rodape_titulo) {
+    margin-bottom: 8px;
+    color: var(--texto-sobre-escuro-suave);
+    font-size: 0.75rem;
+}
+.rodape_descricao {
+    max-width: 250px;
+}
+.rodape_titulo {
+    margin-bottom: 15px;
+    color: var(--laranja-suave);
+    font-size: 0.6875rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.rodape_links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.rodape_links a,
+.rodape_final a {
+    color: var(--texto-sobre-escuro);
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+.rodape_links a:hover,
+.rodape_final a:hover {
+    color: var(--laranja-suave);
+    text-decoration: underline;
+}
+.rodape_final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-block: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+.rodape_final p {
+    margin: 0;
+    color: var(--texto-sobre-escuro-suave);
+    font-size: 0.6875rem;
+}
+
+/* 6. Telas médias */
+@media (max-width: 1000px) {
+    .cabecalho_interno {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .menu_lista {
+        justify-content: flex-start;
+    }
+}
+
+/* 6. Tablets e celulares*/
+@media (max-width: 900px) {
+    .cabecalho_interno {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 0;
+        padding-block: 16px 20px;
+    }
+    .logo_texto {
+        font-size: 1.75rem;
+    }
+    .menu {
+        width: 100%;
+    }
+    .menu_lista {
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 16px;
+        border: 0;
+        border-radius: 26px;
+        box-shadow: 0 14px 30px rgba(53, 34, 23, 0.28);
+    }
+    .menu_lista a {
+        padding: 9px 15px;
+        border-radius: 999px;
+        background: rgba(255, 208, 167, 0.1);
+        font-size: 0.8125rem;
+        transition: background 160ms ease, color 160ms ease;
+    }
+    .menu_lista a:hover {
+        background: rgba(255, 208, 167, 0.2);
+    }
+    /* página atual: botão laranja cheio */
+    .menu_lista a[aria-current="page"] {
+        background: var(--laranja);
+        color: var(--marrom-escuro);
+    }
+    .menu_lista li:last-child {
+        flex: 0 0 100%;
+        margin-top: 6px;
+    }
+    .menu_lista a.menu_botao {
+        display: block;
+        padding: 14px 20px;
+        background: var(--verde);
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    .menu_lista a.menu_botao:hover {
+        background: var(--verde-escuro);
+    }
+}
+
+/* 7. Celulares */
+@media (max-width: 700px) {
+    .container {
+        width: min(100% - 32px, var(--largura));
+    }
+    .secao {
+        padding-block: 62px;
+    }
+    .rodape_interno {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .rodape_final {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Componentes das páginas internas do Bituca Zero */
+.pagina-topo {
+    padding: 76px 0 70px;
+    background: linear-gradient(135deg, var(--bege), #fff);
+    border-bottom: 1px solid var(--borda);
+}
+.pagina-topo .container {
+    max-width: var(--largura);
+}
+.pagina-topo h1 {
+    max-width: 850px;
+    margin: 0 0 18px;
+    font-size: clamp(2.375rem, 5vw, 3.875rem);
+    letter-spacing: -2px;
+    line-height: 1.05;
+}
+.pagina-topo p:last-child {
+    max-width: 760px;
+    color: var(--texto-suave);
+    font-size: 1.0625rem;
+}
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 56px;
+    align-items: center;
+}
+.duas-colunas p {
+    color: var(--texto-suave);
+}
+.painel {
+    padding: 30px;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    background: #fff;
+    box-shadow: var(--sombra);
+}
+.painel h3 {
+    margin-bottom: 18px;
+}
+.lista-destaque {
+    padding-left: 20px;
+    margin: 0;
+    color: inherit;
+}
+.lista-destaque li {
+    padding: 7px 0;
+}
+.nota {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+}
+.nota {
+    margin-top: 24px;
+}
+.fundo-claro {
+    background: #f0f2eb;
+}
+.faq details p {
+    margin: 14px 0 0;
+    color: var(--texto-suave);
+}
+@media (max-width: 800px) {
+    .duas-colunas {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .pagina-topo {
+        padding: 54px 0;
+    }
+}
+@media (max-width: 600px) {
+    .pagina-topo h1 {
+        font-size: 2.5rem;
+    }
+    .painel {
+        padding: 22px;
+    }
+    .secao {
+        padding-block: 56px;
+    }
+}
+
+/* Alinhamento editorial: títulos e introduções centralizados; textos longos com leitura natural. */
+.pagina-topo .container {
+    text-align: center;
+}
+.pagina-topo .container > p:not(.sobretitulo) {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+/* Evita os espaços exagerados que a justificação cria em colunas estreitas. */
+.secao p:not(.sobretitulo):not(.dado_numero):not(.dado_etiqueta) {
+    text-align: left;
+    text-wrap: pretty;
+}
+.secao .sobretitulo {
+    text-align: center;
+}
+.rodape p,
+.rodape li {
+    text-align: left;
+}
+
+/* Correção de alinhamento editorial em todas as páginas. */
+.pagina-topo h1 {
+    margin-inline: auto;
+    text-wrap: balance;
+}
+.pagina-topo .container > p:not(.sobretitulo) {
+    margin-inline: auto;
+    text-align: center;
+    text-align-last: center;
+    word-spacing: normal;
+    text-wrap: pretty;
+}
+.duas-colunas p {
+    text-align: left;
+    text-align-last: left;
+    word-spacing: normal;
+    text-wrap: pretty;
+}
+
+/* Menu em uma única linha no desktop e botão Participe destacado. */
+@media (min-width: 901px) {
+    .cabecalho_interno { gap: 22px; }
+    .menu { flex: 0 1 auto; }
+    .menu_lista {
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4px clamp(8px, 1vw, 15px);
+        padding: 4px 4px 4px 20px;
+    }
+    .menu_lista a { white-space: nowrap; }
+    .menu_lista a.menu_botao {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 11px 25px;
+        white-space: nowrap;
+    }
+}
+
+/* ===== Menu hambúrguer (3 tracinhos) — só aparece em tablet/celular ===== */
+.menu_toggle {
+    display: none;
+}
+@media (max-width: 900px) {
+    .cabecalho { position: relative; }
+    .cabecalho_interno {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0;
+        min-height: 72px;
+        padding-block: 12px;
+    }
+    .menu_toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border: 0;
+        border-radius: 14px;
+        background: var(--marrom-escuro);
+        cursor: pointer;
+        transition: background 160ms ease;
+    }
+    .menu_toggle:hover { background: var(--marrom); }
+    .menu_toggle:focus-visible { outline: 3px solid var(--laranja); outline-offset: 3px; }
+    .menu_toggle_barras,
+    .menu_toggle_barras::before,
+    .menu_toggle_barras::after {
+        display: block;
+        width: 24px;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--laranja-numero);
+        transition: transform 200ms ease, background 200ms ease;
+    }
+    .menu_toggle_barras { position: relative; }
+    .menu_toggle_barras::before,
+    .menu_toggle_barras::after { content: ""; position: absolute; left: 0; }
+    .menu_toggle_barras::before { top: -8px; }
+    .menu_toggle_barras::after { top: 8px; }
+    /* vira um "X" quando aberto */
+    .menu_toggle_ativo .menu_toggle_barras { background: transparent; }
+    .menu_toggle_ativo .menu_toggle_barras::before { transform: translateY(8px) rotate(45deg); }
+    .menu_toggle_ativo .menu_toggle_barras::after { transform: translateY(-8px) rotate(-45deg); }
+    /* menu escondido até clicar nos 3 tracinhos */
+    .menu {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+        margin-top: 12px;
+    }
+    .menu.menu_aberto { display: block; }
+}
+
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+#acesso {
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    bottom: 20px;
+}
+#abrir {
+    width: 56px;
+    height: 56px;
+    border: 2px solid var(--branco);
+    border-radius: 50%;
+    background: var(--verde);
+    color: var(--branco);
+    cursor: pointer;
+    font: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 5px 18px rgba(32, 63, 42, 0.35);
+    transition: background 160ms ease, transform 160ms ease;
+}
+#abrir:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+#painel[hidden] {
+    display: none;
+}
+#painel:not([hidden]) {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 12px);
+    width: min(90vw, 360px);
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+    padding: 20px;
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    background: var(--branco);
+    color: var(--texto);
+    box-shadow: 0 12px 36px rgba(32, 63, 42, 0.25);
+}
+#painel h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    letter-spacing: 0;
+}
+#painel [role="group"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+#painel [role="group"] span {
+    flex-basis: 100%;
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+#painel button {
+    padding: 8px 12px;
+    border: 1px solid var(--verde);
+    border-radius: 8px;
+    background: var(--branco);
+    color: var(--verde-escuro);
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+}
+#painel button:hover {
+    background: var(--laranja-claro);
+}
+#painel button[aria-pressed="true"] {
+    background: var(--verde);
+    color: var(--branco);
+}
+#abrir:focus-visible,
+#painel button:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 3px;
+}
+#painel .a11y-reset {
+    margin-top: 4px;
+    background: var(--verde-escuro);
+    color: var(--branco);
+}
+#painel .a11y-reset:hover {
+    background: var(--verde);
+}
+#acesso svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+html.alto-contraste body,
+html.alto-contraste .cabecalho,
+html.alto-contraste .rodape,
+html.alto-contraste .menu_lista,
+html.alto-contraste .pagina-topo,
+html.alto-contraste .secao,
+html.alto-contraste .fundo-claro,
+html.alto-contraste .painel,
+html.alto-contraste #painel,
+html.alto-contraste #abrir,
+html.alto-contraste .menu_toggle,
+html.alto-contraste button {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
+}
+html.alto-contraste h1,
+html.alto-contraste h2,
+html.alto-contraste h3,
+html.alto-contraste p,
+html.alto-contraste li,
+html.alto-contraste .logo_texto {
+    color: #fff !important;
+}
+html.alto-contraste a,
+html.alto-contraste h1 em,
+html.alto-contraste h2 em,
+html.alto-contraste .sobretitulo,
+html.alto-contraste .logo_texto strong {
+    color: #ffff00 !important;
+}
+html.alto-contraste .menu_toggle_barras,
+html.alto-contraste .menu_toggle_barras::before,
+html.alto-contraste .menu_toggle_barras::after {
+    background: #ffff00;
+}
+html.alto-contraste .menu_toggle_ativo .menu_toggle_barras {
+    background: transparent;
+}
+html.escala-cinza {
+    filter: grayscale(100%);
+}
+html.fonte-legivel body,
+html.fonte-legivel button {
+    font-family: Verdana, Arial, sans-serif;
+    letter-spacing: 0.03em;
+}
+html.destacar-links a {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    background: #ffff99;
+    color: #000 !important;
+}
+html.espacamento body {
+    line-height: 1.9;
+    letter-spacing: 0.05em;
+    word-spacing: 0.15em;
+}
+html.dalt-protanopia {
+    filter: url(#filtro-protanopia);
+}
+html.dalt-deuteranopia {
+    filter: url(#filtro-deuteranopia);
+}
+html.dalt-tritanopia {
+    filter: url(#filtro-tritanopia);
+}

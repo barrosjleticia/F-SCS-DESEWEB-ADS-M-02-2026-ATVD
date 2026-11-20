@@ -1,0 +1,132 @@
+/* ===== Estilos desta página (antes ficavam em base.css) ===== */
+/* 4. Botões e links com seta */
+.botao_principal {
+    background: var(--laranja);
+    color: var(--texto-botao);
+}
+.botao_principal:hover {
+    background: var(--laranja-hover);
+}
+
+/* Componentes das páginas internas do Bituca Zero */
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin: 32px 0;
+}
+.cartao-info {
+    padding: 26px;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background: #fff;
+}
+.cartao-info>span {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--laranja);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.cartao-info h3 {
+    margin-bottom: 10px;
+}
+.cartao-info p {
+    color: var(--texto-suave);
+    font-size: 0.875rem;
+}
+@media (max-width: 800px) {
+    .grade-cartoes {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .grade-cartoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Evita os espaços exagerados que a justificação cria em colunas estreitas. */
+.cartao-info p {
+    text-align: left;
+    text-wrap: pretty;
+}
+
+/* Faixas em degradê inspiradas na abertura da Home. */
+.pagina-topo-gradiente {
+    background: linear-gradient(150deg, var(--marrom-escuro) 0%, var(--laranja) 100%);
+    border-bottom: 0;
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 {
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 em {
+    color: #ffd0a7;
+}
+.pagina-topo-gradiente .sobretitulo {
+    color: #ffe0c5;
+}
+.pagina-topo-gradiente .container > p:not(.sobretitulo) {
+    color: #fff4e9;
+}
+
+/* Foto editorial inserida na página O problema. */
+.secao-foto-problema {
+    background: linear-gradient(145deg, var(--marrom-escuro), var(--laranja));
+    color: #fff;
+}
+.foto-problema-grade {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 52px;
+    align-items: center;
+}
+.foto-problema-grade img {
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    max-height: 430px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 22px 45px rgba(0,0,0,.22);
+}
+.foto-problema-grade h2 {
+    color: #fff;
+}
+.foto-problema-grade h2 em {
+    color: #ffd0a7;
+}
+.foto-problema-grade p:not(.sobretitulo) {
+    color: #fff4e9;
+}
+
+/* A calculadora ganha uma área verde, mantendo o formulário claro e legível. */
+@media (max-width: 800px) {
+    .foto-problema-grade {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .foto-problema-grade img {
+        min-height: 220px;
+    }
+}
+
+/* Correção de alinhamento editorial em todas as páginas. */
+.painel p,
+.cartao-info p {
+    text-align: left;
+    text-align-last: left;
+    word-spacing: normal;
+    text-wrap: pretty;
+}
+
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+html.alto-contraste .pagina-topo-gradiente,
+html.alto-contraste .secao-foto-problema,
+html.alto-contraste .cartao-info {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
+}

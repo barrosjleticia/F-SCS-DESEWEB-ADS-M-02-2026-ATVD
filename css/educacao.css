@@ -1,0 +1,35 @@
+/* ===== Estilos desta página (antes ficavam em base.css) ===== */
+/* Componentes das páginas internas do Bituca Zero */
+.faq {
+    display: grid;
+    gap: 12px;
+}
+.faq details {
+    padding: 20px 22px;
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+    background: #fff;
+}
+.faq summary {
+    color: var(--verde-escuro);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Correção de alinhamento editorial em todas as páginas. */
+.faq details p {
+    text-align: left;
+    text-align-last: left;
+    word-spacing: normal;
+    text-wrap: pretty;
+}
+
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+html.alto-contraste .faq details {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
+}
+html.alto-contraste summary {
+    color: #fff !important;
+}
