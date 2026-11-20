@@ -31,25 +31,24 @@ Também apresenta alternativas para o descarte adequado, iniciativas de sustenta
 
 O site é composto por 10 páginas interligadas:
 HOME (index.html)
-    |
-    |--- O problema (problema.html)
-    |
-    |--- Descarte correto (descarte.html)
-    |
-    |--- Sustentabilidade (sustentabilidade.html)
-    |
-    |--- Objetivos (objetivos.html)
-    |
-    |--- Impacto (impacto.html)
-    |
-    |--- Notícias (noticias.html)
-    |
-    |--- Calculadora (calculadora.html)
-    |
-    |--- Educação (educacao.html)
-    |
-    |--- Participe (participe.html)
-
+   |
+   |-- O problema (problema.html)
+   |
+   |-- Descarte correto (descarte.html)
+   |
+   |-- Sustentabilidade (sustentabilidade.html)
+   |
+   |-- Objetivos (objetivos.html)
+   |
+   |-- Impacto (impacto.html)
+   |
+   |-- Notícias (noticias.html)
+   |
+   |-- Calculadora (calculadora.html)
+   |
+   |-- Educação (educacao.html)
+   |
+   |-- Participe (participe.html)
 ## Tecnologias utilizadas
 
 - HTML5 — estruturação e organização das páginas.
