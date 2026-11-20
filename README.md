@@ -30,25 +30,17 @@ Também apresenta alternativas para o descarte adequado, iniciativas de sustenta
 ## Funcionalidades e páginas
 
 O site é composto por 10 páginas interligadas:
-HOME (index.html)
-   |
-   |-- O problema (problema.html)
-   |
-   |-- Descarte correto (descarte.html)
-   |
-   |-- Sustentabilidade (sustentabilidade.html)
-   |
-   |-- Objetivos (objetivos.html)
-   |
-   |-- Impacto (impacto.html)
-   |
-   |-- Notícias (noticias.html)
-   |
-   |-- Calculadora (calculadora.html)
-   |
-   |-- Educação (educacao.html)
-   |
-   |-- Participe (participe.html)
+- Início: apresentação do projeto e acesso às principais seções.
+- O problema: explicação sobre a poluição causada pelas bitucas.
+- Descarte correto: orientações sobre o descarte responsável.
+- Sustentabilidade: apresentação de práticas e iniciativas sustentáveis.
+- Objetivos: metas e propostas do projeto.
+- Impacto: informações sobre os impactos ambientais.
+- Notícias: pesquisas, publicações e iniciativas relacionadas ao tema.
+- Calculadora: estimativa da quantidade de bitucas descartadas diariamente e anualmente.
+- Educação: conteúdos educativos e vídeos sobre o assunto.
+- Participe: formulário para dúvidas, sugestões e compartilhamento de iniciativas.
+
 ## Tecnologias utilizadas
 
 - HTML5 — estruturação e organização das páginas.
