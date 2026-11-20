@@ -62,5 +62,5 @@ A identidade visual do Bituca Zero utiliza uma combinação de verde, laranja, m
 
 ## 🔗 Acesso ao projeto
 
-- **Site publicado:** []
-- **Repositório GitHub:** []
+- **Site publicado:** [f-scs-deseweb-ads-m-02-2026-atvd-production.up.railway.app]
+- **Repositório GitHub:** [https://github.com/barrosjleticia/F-SCS-DESEWEB-ADS-M-02-2026-ATVD.git]
