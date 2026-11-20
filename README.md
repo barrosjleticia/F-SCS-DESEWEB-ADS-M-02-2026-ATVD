@@ -10,7 +10,7 @@ O site tem como finalidade conscientizar a população sobre os impactos ambient
 
 Por meio de conteúdos informativos, recursos educativos e orientações práticas, o projeto busca mostrar que pequenas atitudes individuais podem contribuir para a preservação do meio ambiente.
 
-##Objetivos
+## Objetivos
 
 - Conscientizar a população sobre os impactos ambientais das bitucas de cigarro.
 - Informar sobre a composição dos filtros e os resíduos que podem contaminar o solo e a água.
