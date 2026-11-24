@@ -60,3 +60,117 @@ html.alto-contraste .passo {
     color: #fff !important;
     border-color: #fff;
 }
+
+
+/* Mapa compacto e pontos de coleta em grade: evita o vazio ao lado do mapa. */
+.mapa-coleta { background: #fff; }
+.mapa-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+}
+.mapa-caixa {
+    padding: 9px;
+    width: 100%;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: var(--sombra);
+}
+#mapa-bitucas {
+    width: 100%;
+    height: 190px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.mapa-legenda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 4px 0;
+    color: var(--texto-suave);
+    font-size: .75rem;
+}
+.mapa-legenda span {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.legenda-abc { background: #d97732; }
+.legenda-sp { background: #315b3b; margin-left: 10px; }
+.mapa-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    align-items: stretch;
+}
+.local-coleta {
+    padding: 18px;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    background: #fff;
+}
+.local-destaque { border-left: 4px solid var(--laranja); }
+.local-selo {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--laranja);
+    font-size: .63rem;
+    font-weight: 900;
+    letter-spacing: .7px;
+}
+.local-coleta h3 { margin-bottom: 8px; font-size: 1.05rem; }
+.local-coleta p {
+    margin-bottom: 9px;
+    color: var(--texto-suave);
+    font-size: .85rem;
+}
+.local-coleta a {
+    display: inline-block;
+    margin: 3px 12px 0 0;
+    color: var(--verde-escuro);
+    font-size: .78rem;
+    font-weight: 700;
+}
+.reciclagem-painel { align-self: stretch; }
+.etapas-reciclagem {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: etapa;
+}
+.etapas-reciclagem li {
+    position: relative;
+    display: grid;
+    gap: 3px;
+    padding: 0 0 18px 42px;
+    counter-increment: etapa;
+}
+.etapas-reciclagem li:last-child { padding-bottom: 0; }
+.etapas-reciclagem li::before {
+    content: counter(etapa, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--laranja);
+    font-weight: 900;
+}
+.etapas-reciclagem span {
+    color: var(--texto-suave);
+    font-size: .88rem;
+}
+.botao-reciclagem {
+    margin-top: 8px;
+    background: var(--verde);
+    color: #fff;
+}
+.botao-reciclagem:hover { background: var(--verde-escuro); color: #fff; }
+@media (max-width: 850px) {
+    .mapa-lista { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+    #mapa-bitucas { height: 175px; }
+}
