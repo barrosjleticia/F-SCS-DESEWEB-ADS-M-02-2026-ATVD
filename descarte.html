@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#315b3b">
     <title>Descarte correto | Bituca Zero</title>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <link rel="stylesheet" href="css/descarte.css">
+    <link rel="stylesheet" href="css/mapa-coleta.css?v=2">
 </head>
 <body>
     <a class="atalho-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
@@ -86,16 +86,49 @@
                         <p class="sobretitulo">ONDE DESCARTAR</p>
                         <h2>Pontos de <em>coleta de bitucas.</em></h2>
                     </div>
-                    <p>Escolha um local na lista para ver a posição no mapa. Localizações aproximadas: confirme com o estabelecimento antes de ir.</p>
+                    <p>Clique em um local da lista para vê-lo no mapa. Localizações aproximadas: confirme com o estabelecimento antes de ir.</p>
                 </div>
                 <div class="mapa-grade">
-                    <ol class="pontos-lista" id="pontos-lista" aria-label="Lista de pontos de coleta"></ol>
+                    <ol class="pontos-lista" aria-label="Lista de pontos de coleta">
+                        <li class="ponto">
+                            <a class="ponto_botao" href="https://www.openstreetmap.org/export/embed.html?bbox=-46.5367%2C-23.6679%2C-46.5287%2C-23.6599&amp;layer=mapnik&amp;marker=-23.6639%2C-46.5327" target="mapa-pontos">
+                                <span class="ponto_num" aria-hidden="true">1</span>
+                                <span class="ponto_texto"><strong>Paço Municipal de Santo André</strong><small>Praça IV Centenário, Centro · Santo André</small><small>Lixeiras para bitucas no entorno do Paço, em projeto da Prefeitura com a Poiato Recicla. Fonte: Diário do Grande ABC.</small></span>
+                            </a>
+                            <a class="ponto_link" href="https://www.openstreetmap.org/?mlat=-23.6639&amp;mlon=-46.5327#map=17/-23.6639/-46.5327" target="_blank" rel="noopener">Abrir mapa maior<span class="sr-only"> (nova aba)</span></a>
+                        </li>
+                        <li class="ponto">
+                            <a class="ponto_botao" href="https://www.openstreetmap.org/export/embed.html?bbox=-46.6599%2C-23.5654%2C-46.6519%2C-23.5574&amp;layer=mapnik&amp;marker=-23.5614%2C-46.6559" target="mapa-pontos">
+                                <span class="ponto_num" aria-hidden="true">2</span>
+                                <span class="ponto_texto"><strong>MASP</strong><small>Av. Paulista, 1578 · São Paulo</small><small>Coletor de bitucas do programa Paulista Sustentável.</small></span>
+                            </a>
+                            <a class="ponto_link" href="https://www.openstreetmap.org/?mlat=-23.5614&amp;mlon=-46.6559#map=17/-23.5614/-46.6559" target="_blank" rel="noopener">Abrir mapa maior<span class="sr-only"> (nova aba)</span></a>
+                        </li>
+                        <li class="ponto">
+                            <a class="ponto_botao" href="https://www.openstreetmap.org/export/embed.html?bbox=-46.6647%2C-23.5626%2C-46.6567%2C-23.5546&amp;layer=mapnik&amp;marker=-23.5586%2C-46.6607" target="mapa-pontos">
+                                <span class="ponto_num" aria-hidden="true">3</span>
+                                <span class="ponto_texto"><strong>Conjunto Nacional</strong><small>Av. Paulista, 2073 · São Paulo</small><small>Coletor de bitucas do programa Paulista Sustentável.</small></span>
+                            </a>
+                            <a class="ponto_link" href="https://www.openstreetmap.org/?mlat=-23.5586&amp;mlon=-46.6607#map=17/-23.5586/-46.6607" target="_blank" rel="noopener">Abrir mapa maior<span class="sr-only"> (nova aba)</span></a>
+                        </li>
+                        <li class="ponto">
+                            <a class="ponto_botao" href="https://www.openstreetmap.org/export/embed.html?bbox=-46.6507%2C-23.5743%2C-46.6427%2C-23.5663&amp;layer=mapnik&amp;marker=-23.5703%2C-46.6467" target="mapa-pontos">
+                                <span class="ponto_num" aria-hidden="true">4</span>
+                                <span class="ponto_texto"><strong>Sesc Paulista</strong><small>Av. Paulista, 119 · São Paulo</small><small>Coletor de bitucas do programa Paulista Sustentável.</small></span>
+                            </a>
+                            <a class="ponto_link" href="https://www.openstreetmap.org/?mlat=-23.5703&amp;mlon=-46.6467#map=17/-23.5703/-46.6467" target="_blank" rel="noopener">Abrir mapa maior<span class="sr-only"> (nova aba)</span></a>
+                        </li>
+                        <li class="ponto">
+                            <a class="ponto_botao" href="https://www.openstreetmap.org/export/embed.html?bbox=-46.6497%2C-23.5752%2C-46.6417%2C-23.5672&amp;layer=mapnik&amp;marker=-23.5712%2C-46.6457" target="mapa-pontos">
+                                <span class="ponto_num" aria-hidden="true">5</span>
+                                <span class="ponto_texto"><strong>Japan House</strong><small>Av. Paulista, 52 · São Paulo</small><small>Coletor de bitucas do programa Paulista Sustentável.</small></span>
+                            </a>
+                            <a class="ponto_link" href="https://www.openstreetmap.org/?mlat=-23.5712&amp;mlon=-46.6457#map=17/-23.5712/-46.6457" target="_blank" rel="noopener">Abrir mapa maior<span class="sr-only"> (nova aba)</span></a>
+                        </li>
+                    </ol>
                     <div class="mapa-caixa">
-                        <div id="mapa-pontos" role="region" aria-label="Mapa com os pontos de coleta de bitucas"></div>
-                        <p class="mapa-ajuda nota">
-                            <span>Conhece um ponto de coleta? <a href="participe.html">Conte para a gente</a>.</span>
-                            <button type="button" id="mapa-todos">Ver todos os pontos</button>
-                        </p>
+                        <iframe id="mapa-pontos" name="mapa-pontos" title="Mapa com a localização do ponto de coleta selecionado" src="https://www.openstreetmap.org/export/embed.html?bbox=-46.5367%2C-23.6679%2C-46.5287%2C-23.6599&amp;layer=mapnik&amp;marker=-23.6639%2C-46.5327" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                        <p class="mapa-ajuda nota">Conhece um ponto de coleta? <a href="participe.html">Conte para a gente</a>.</p>
                     </div>
                 </div>
             </div>
@@ -182,8 +215,6 @@
             </defs>
         </svg>
     </div>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="js/pontos-coleta.js" defer></script>
     <script src="js/menu.js" defer></script>
     <script src="js/acessibilidade.js" defer></script>
 </body>
