@@ -103,12 +103,73 @@
                 <p class="nota">As informações foram resumidas a partir das publicações originais. Consulte os links para ler o conteúdo completo e verificar eventuais atualizações.</p>
             </div>
         </section>
+<section class="secao podcast-secao" aria-labelledby="titulo-podcast">
+    <div class="container">
+        <div class="podcast-topo">
+            <p class="sobretitulo">BITUCA ZERO APRESENTA</p>
+            <h2 id="titulo-podcast">Ouça, reflita e <em>compartilhe.</em></h2>
+            <p>Um episódio especial para entender o caminho das bitucas depois do descarte e conhecer iniciativas que ajudam a reduzir esse impacto.</p>
+        </div>
+
+        <article class="podcast-player" aria-labelledby="podcast-episodio-titulo">
+            <div class="podcast-capa" role="img" aria-label="Capa do podcast Bituca Zero, com as letras BZ e ilustração de uma folha">
+                <span class="podcast-capa-selo">PODCAST</span>
+                <div class="podcast-capa-centro"><span>BZ</span><span class="podcast-folha" aria-hidden="true">✦</span></div>
+                <strong>BITUCA<br>ZERO</strong>
+                <small>INFORMAÇÃO QUE TRANSFORMA</small>
+            </div>
+
+            <div class="podcast-conteudo">
+                <p class="podcast-numero">EPISÓDIO 01 · MEIO AMBIENTE</p>
+                <h3 id="podcast-episodio-titulo">Para onde vão as bitucas depois do descarte?</h3>
+                <p class="podcast-descricao">Uma conversa sobre o caminho desses resíduos, seus impactos na água e no solo e as iniciativas de coleta e reciclagem.</p>
+
+                <audio id="audio-podcast" controls preload="metadata">
+                    <source src="audio/episodio-01.wav" type="audio/wav">
+                    Seu navegador não oferece suporte ao player de áudio. Você pode ler a transcrição abaixo.
+                </audio>
+
+                <div class="podcast-controles" aria-label="Controles adicionais do episódio">
+                    <div class="podcast-pulos">
+                        <button type="button" id="voltar-15" class="podcast-botao">↶ 15s</button>
+                        <button type="button" id="avancar-15" class="podcast-botao">15s ↷</button>
+                    </div>
+                    <label class="podcast-velocidade" for="velocidade-audio">Velocidade:
+                        <select id="velocidade-audio">
+                            <option value="0.75">0,75x</option>
+                            <option value="1" selected>1x</option>
+                            <option value="1.25">1,25x</option>
+                            <option value="1.5">1,5x</option>
+                            <option value="1.75">1,75x</option>
+                            <option value="2">2x</option>
+                        </select>
+                    </label>
+                </div>
+
+                <details class="podcast-transcricao">
+                    <summary>Ler transcrição do episódio</summary>
+                    <div class="podcast-texto">
+                        <p>Você está ouvindo o Bituca Zero, um espaço para conversar sobre meio ambiente e pequenas atitudes que fazem diferença.</p>
+                        <p>No episódio de hoje: para onde vão as bitucas depois do descarte?</p>
+                        <p>Uma bituca pode parecer pequena e inofensiva. Mas, quando é jogada na rua, ela pode ser levada pela chuva até bueiros, córregos e rios. O filtro do cigarro contém acetato de celulose, um tipo de plástico que pode permanecer no ambiente por muito tempo e se fragmentar em partículas menores.</p>
+                        <p>Além disso, a bituca usada pode carregar resíduos da fumaça, como nicotina e metais. Essas substâncias podem se espalhar no solo e na água, afetando os ambientes e os seres vivos.</p>
+                        <p>E quando ela é descartada corretamente? O primeiro passo é esperar que esteja completamente apagada e colocá-la em um coletor apropriado. Em alguns municípios e projetos, esses resíduos são recolhidos e encaminhados para processos específicos de tratamento e reciclagem. Isso não significa que toda bituca possa ser reciclada em qualquer lugar: é preciso existir coleta e destinação adequadas.</p>
+                        <p>As notícias mostram iniciativas que já acontecem, como a instalação de coletores em Santos. São ações importantes, mas a prevenção continua sendo fundamental: não jogar bitucas no chão, nas praias ou nos bueiros e apoiar soluções de descarte responsável.</p>
+                        <p>Uma bituca é pequena. O impacto de milhares delas, não. Informação, responsabilidade e participação ajudam a manter nossas cidades e águas mais limpas.</p>
+                        <p>Este foi o Bituca Zero. Obrigado por ouvir. Até o próximo episódio!</p>
+                    </div>
+                </details>
+            </div>
+        </article>
+    </div>
+</section>
+
 <section class="secao fundo-claro">
     <div class="container">
         <div class="multimidia-topo">
             <p class="sobretitulo">CONTEÚDO MULTIMÍDIA</p>
             <h2>Assista e entenda os <em>impactos das bitucas.</em></h2>
-            <p class="introducao-multimidia">Os vídeos apresentam os efeitos do descarte inadequado, os riscos para o ambiente e iniciativas que ajudam a reduzir esse tipo de poluição.</p>
+            <p class="introducao-multimidia">Além do podcast, confira vídeos que apresentam os efeitos do descarte inadequado, os riscos para o ambiente e iniciativas que ajudam a reduzir esse tipo de poluição.</p>
         </div>
 
         <div class="multimidia-grade">
@@ -199,6 +260,7 @@
             </defs>
         </svg>
     </div>
+    <script src="js/podcast.js" defer></script>
     <script src="js/menu.js" defer></script>
     <script src="js/acessibilidade.js" defer></script>
 </body>
