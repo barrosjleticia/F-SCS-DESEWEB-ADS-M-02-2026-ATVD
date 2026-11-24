@@ -1,359 +1,61 @@
-/* =========================================================
-   BITUCA ZERO — PÁGINA DESCARTE CORRETO
-   Estilos específicos da página.
-   As regras globais, variáveis e componentes compartilhados
-   são herdados de base.css.
-   ========================================================= */
-
-/* Cabeçalho das seções */
-.secao-cabecalho {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 32px;
-    margin-bottom: 36px;
+/* Componentes das páginas internas do Bituca Zero */
+.passo>b {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--laranja);
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
-
-.secao-cabecalho > div {
-    max-width: 680px;
-}
-
-.secao-cabecalho h2 {
-    margin-bottom: 0;
-}
-
-.secao-cabecalho > p {
-    max-width: 390px;
-    margin: 0 0 4px;
-    color: var(--texto-suave);
-    font-size: 0.9375rem;
-}
-
-/* Passo a passo do descarte */
 .passos-grade {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
 }
-
 .passo {
-    min-width: 0;
-    padding: 26px 22px;
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    background: var(--branco);
-    box-shadow: var(--sombra);
+    padding: 26px;
+    border-left: 4px solid var(--laranja);
+    border-radius: 0 16px 16px 0;
+    background: #fff;
 }
-
-.passo b {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    margin-bottom: 22px;
-    border-radius: 50%;
-    background: var(--laranja-claro);
-    color: var(--verde-escuro);
-    font-size: 0.875rem;
-    font-weight: 800;
-}
-
-.passo h3 {
-    margin-bottom: 12px;
-    font-size: 1.125rem;
-}
-
 .passo p {
-    margin-bottom: 0;
-    color: var(--texto-suave);
-    font-size: 0.9rem;
-    line-height: 1.65;
-}
-
-/* Aviso sobre coleta seletiva
-   O painel mantém o visual branco definido em base.css. */
-.secao.fundo-claro .duas-colunas {
-    align-items: center;
-}
-
-.secao .painel .lista-destaque {
-    color: var(--texto);
-}
-
-.secao .painel .lista-destaque li::marker {
-    color: var(--laranja);
-}
-
-/* Mapa e lista de pontos documentados */
-.mapa-coleta {
-    background: var(--fundo);
-}
-
-.mapa-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-    align-items: stretch;
-    gap: 24px;
-}
-
-.mapa-caixa {
-    min-width: 0;
-    padding: 14px;
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    background: var(--branco);
-    box-shadow: var(--sombra);
-}
-
-#mapa-bitucas {
-    width: 100%;
-    height: 440px;
-    min-height: 320px;
-    overflow: hidden;
-    border-radius: calc(var(--raio) - 8px);
-    background: #e9eee7;
-    z-index: 1;
-}
-
-.mapa-legenda {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
-    margin: 14px 4px 2px;
-    color: var(--texto-suave);
-    font-size: 0.8125rem;
-}
-
-.legenda-abc,
-.legenda-sp {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-left: 8px;
-    border-radius: 50%;
-}
-
-.legenda-abc {
-    background: var(--laranja);
-}
-
-.legenda-sp {
-    background: var(--verde);
-}
-
-.mapa-lista {
-    display: grid;
-    gap: 14px;
-    align-content: start;
-}
-
-.local-coleta {
-    padding: 22px;
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    background: var(--branco);
-    box-shadow: var(--sombra);
-}
-
-.local-coleta.local-destaque {
-    border-color: var(--laranja);
-}
-
-.local-selo {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: var(--laranja);
-    font-size: 0.6875rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-    line-height: 1.5;
-}
-
-.local-coleta h3 {
-    margin-bottom: 9px;
-    font-size: 1.125rem;
-}
-
-.local-coleta p {
-    margin-bottom: 14px;
-    color: var(--texto-suave);
-    font-size: 0.875rem;
-    line-height: 1.6;
-}
-
-.local-coleta a {
-    display: inline-block;
-    margin: 4px 14px 0 0;
-    color: var(--verde);
-    font-size: 0.8125rem;
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: var(--borda);
-    text-underline-offset: 3px;
-}
-
-.local-coleta a:hover {
-    color: var(--laranja);
-    text-decoration-color: currentColor;
-}
-
-/* Processo de reciclagem */
-.reciclagem-bitucas .duas-colunas {
-    align-items: center;
-}
-
-.reciclagem-bitucas h2 {
-    max-width: 620px;
-}
-
-.reciclagem-bitucas p:not(.sobretitulo) {
     color: var(--texto-suave);
 }
-
-.botao-reciclagem {
-    margin-top: 8px;
-    background: var(--laranja);
-    color: var(--marrom-escuro);
-}
-
-.botao-reciclagem:hover {
-    background: var(--laranja-hover);
-    color: var(--marrom-escuro);
-}
-
-/* O painel de reciclagem reaproveita .painel de base.css.
-   Não redefine fundo, borda, sombra, raio ou espaçamento. */
-.etapas-reciclagem {
-    display: grid;
-    gap: 18px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: etapa-reciclagem;
-}
-
-.etapas-reciclagem li {
-    position: relative;
-    min-width: 0;
-    padding-left: 48px;
-    counter-increment: etapa-reciclagem;
-}
-
-.etapas-reciclagem li::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--laranja-claro);
-    color: var(--verde-escuro);
-    content: counter(etapa-reciclagem, decimal-leading-zero);
-    font-size: 0.75rem;
-    font-weight: 800;
-}
-
-.etapas-reciclagem strong {
-    display: block;
-    margin-bottom: 4px;
-    color: var(--verde-escuro);
-    font-size: 0.9375rem;
-    line-height: 1.4;
-}
-
-.etapas-reciclagem span {
-    display: block;
-    color: var(--texto-suave);
-    font-size: 0.875rem;
-    line-height: 1.55;
-}
-
-/* Ajustes para telas médias */
-@media (max-width: 1000px) {
-    .passos-grade {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .mapa-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .mapa-lista {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .local-destaque {
-        grid-column: 1 / -1;
-    }
-}
-
-/* Tablets e celulares */
-@media (max-width: 700px) {
-    .secao-cabecalho {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 14px;
-        margin-bottom: 26px;
-    }
-
-    .secao-cabecalho > p {
-        max-width: 100%;
-    }
-
-    .passos-grade {
-        gap: 14px;
-    }
-
-    .passo {
-        padding: 22px 18px;
-    }
-
-    .mapa-lista {
-        grid-template-columns: 1fr;
-    }
-
-    .local-destaque {
-        grid-column: auto;
-    }
-
-    #mapa-bitucas {
-        height: 350px;
-        min-height: 280px;
-    }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .passos-grade {
         grid-template-columns: 1fr;
     }
+}
 
-    .passo {
-        padding: 22px;
-    }
+/* Evita os espaços exagerados que a justificação cria em colunas estreitas. */
+.passo p {
+    text-align: left;
+    text-wrap: pretty;
+}
 
-    .mapa-caixa {
-        padding: 9px;
-    }
+/* Faixas em degradê inspiradas na abertura da Home. */
+.pagina-topo-gradiente {
+    background: linear-gradient(150deg, var(--marrom-escuro) 0%, var(--laranja) 100%);
+    border-bottom: 0;
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 {
+    color: var(--branco);
+}
+.pagina-topo-gradiente h1 em {
+    color: #ffd0a7;
+}
+.pagina-topo-gradiente .sobretitulo {
+    color: #ffe0c5;
+}
+.pagina-topo-gradiente .container > p:not(.sobretitulo) {
+    color: #fff4e9;
+}
 
-    #mapa-bitucas {
-        height: 300px;
-        min-height: 260px;
-    }
-
-    .local-coleta {
-        padding: 20px;
-    }
-
-    .etapas-reciclagem {
-        gap: 16px;
-    }
-
-    .etapas-reciclagem li {
-        padding-left: 42px;
-    }
+/* ===== Acessibilidade (painel A+, baseado no LibraryByte) ===== */
+html.alto-contraste .pagina-topo-gradiente,
+html.alto-contraste .passo {
+    background: #000 !important;
+    color: #fff !important;
+    border-color: #fff;
 }
