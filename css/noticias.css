@@ -693,3 +693,46 @@ html.alto-contraste .midia-card {
         padding: 22px;
     }
 }
+
+
+/* Versão simples do podcast: sem capa, ilustração ou bloco quadrado. */
+.bz-podcast-secao {
+    padding-block: 44px;
+}
+.bz-podcast-topo {
+    margin-bottom: 24px;
+}
+.bz-podcast-topo h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+.bz-podcast-card-simples {
+    display: block;
+    max-width: 880px;
+    margin-inline: auto;
+    padding: 28px 32px;
+}
+.bz-podcast-card-simples .bz-podcast-conteudo {
+    width: 100%;
+}
+.bz-podcast-card-simples .bz-podcast-identificacao {
+    margin-bottom: 10px;
+    font-size: .82rem;
+    letter-spacing: 2px;
+}
+.bz-podcast-card-simples .bz-podcast-numero {
+    margin-bottom: 7px;
+}
+.bz-podcast-card-simples .bz-podcast-conteudo h3 {
+    font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+}
+.bz-podcast-card-simples .bz-podcast-descricao {
+    margin-bottom: 17px;
+}
+.bz-podcast-card-simples audio {
+    width: 100%;
+}
+@media (max-width: 600px) {
+    .bz-podcast-card-simples {
+        padding: 22px 18px;
+    }
+}
