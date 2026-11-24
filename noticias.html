@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#315b3b">
     <title>Notícias | Bituca Zero</title>
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="css/noticias.css?v=3">
 </head>
 <body>
     <a class="atalho-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
@@ -103,38 +103,44 @@
                 <p class="nota">As informações foram resumidas a partir das publicações originais. Consulte os links para ler o conteúdo completo e verificar eventuais atualizações.</p>
             </div>
         </section>
-<section class="secao podcast-secao" aria-labelledby="titulo-podcast">
+<section class="secao bz-podcast-secao" aria-labelledby="titulo-podcast">
     <div class="container">
-        <div class="podcast-topo">
+        <div class="bz-podcast-topo">
             <p class="sobretitulo">BITUCA ZERO APRESENTA</p>
             <h2 id="titulo-podcast">Ouça, reflita e <em>compartilhe.</em></h2>
             <p>Um episódio especial para entender o caminho das bitucas depois do descarte e conhecer iniciativas que ajudam a reduzir esse impacto.</p>
         </div>
 
-        <article class="podcast-player" aria-labelledby="podcast-episodio-titulo">
-            <div class="podcast-capa" role="img" aria-label="Capa do podcast Bituca Zero, com as letras BZ e ilustração de uma folha">
-                <span class="podcast-capa-selo">PODCAST</span>
-                <div class="podcast-capa-centro"><span>BZ</span><span class="podcast-folha" aria-hidden="true">✦</span></div>
-                <strong>BITUCA<br>ZERO</strong>
-                <small>INFORMAÇÃO QUE TRANSFORMA</small>
+        <article class="bz-podcast-card" aria-labelledby="podcast-episodio-titulo">
+            <div class="bz-podcast-arte" aria-hidden="true">
+                <span class="bz-podcast-etiqueta">PODCAST · EPISÓDIO 01</span>
+                <div class="bz-podcast-ondas">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="bz-podcast-arte-titulo">BITUCA<br>ZERO</p>
+                <span class="bz-podcast-arte-rodape">INFORMAÇÃO QUE TRANSFORMA</span>
             </div>
 
-            <div class="podcast-conteudo">
-                <p class="podcast-numero">EPISÓDIO 01 · MEIO AMBIENTE</p>
+            <div class="bz-podcast-conteudo">
+                <p class="bz-podcast-numero">EPISÓDIO 01 · MEIO AMBIENTE</p>
                 <h3 id="podcast-episodio-titulo">Para onde vão as bitucas depois do descarte?</h3>
-                <p class="podcast-descricao">Uma conversa sobre o caminho desses resíduos, seus impactos na água e no solo e as iniciativas de coleta e reciclagem.</p>
+                <p class="bz-podcast-descricao">Uma conversa sobre o caminho desses resíduos, seus impactos na água e no solo e as iniciativas de coleta e reciclagem.</p>
 
                 <audio id="audio-podcast" controls preload="metadata">
                     <source src="audio/episodio-01.wav" type="audio/wav">
                     Seu navegador não oferece suporte ao player de áudio. Você pode ler a transcrição abaixo.
                 </audio>
 
-                <div class="podcast-controles" aria-label="Controles adicionais do episódio">
-                    <div class="podcast-pulos">
-                        <button type="button" id="voltar-15" class="podcast-botao">↶ 15s</button>
-                        <button type="button" id="avancar-15" class="podcast-botao">15s ↷</button>
+                <div class="bz-podcast-controles" aria-label="Controles adicionais do episódio">
+                    <div class="bz-podcast-pulos">
+                        <button type="button" id="voltar-15" class="bz-podcast-botao">↶ 15 segundos</button>
+                        <button type="button" id="avancar-15" class="bz-podcast-botao">15 segundos ↷</button>
                     </div>
-                    <label class="podcast-velocidade" for="velocidade-audio">Velocidade:
+                    <label class="bz-podcast-velocidade" for="velocidade-audio">Velocidade
                         <select id="velocidade-audio">
                             <option value="0.75">0,75x</option>
                             <option value="1" selected>1x</option>
@@ -146,9 +152,9 @@
                     </label>
                 </div>
 
-                <details class="podcast-transcricao">
+                <details class="bz-podcast-transcricao">
                     <summary>Ler transcrição do episódio</summary>
-                    <div class="podcast-texto">
+                    <div class="bz-podcast-texto">
                         <p>Você está ouvindo o Bituca Zero, um espaço para conversar sobre meio ambiente e pequenas atitudes que fazem diferença.</p>
                         <p>No episódio de hoje: para onde vão as bitucas depois do descarte?</p>
                         <p>Uma bituca pode parecer pequena e inofensiva. Mas, quando é jogada na rua, ela pode ser levada pela chuva até bueiros, córregos e rios. O filtro do cigarro contém acetato de celulose, um tipo de plástico que pode permanecer no ambiente por muito tempo e se fragmentar em partículas menores.</p>
