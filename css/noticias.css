@@ -359,7 +359,6 @@ html.alto-contraste .midia-card {
     padding: 24px;
     border-radius: 18px;
     color: #f8f5e9;
-    background: radial-gradient(circle at 78% 23%, rgba(226, 181, 112, .9) 0 8%, transparent 8.5%), linear-gradient(145deg, #477d7c 0%, #17444a 52%, #08252d 100%);
 }
 .podcast-capa-selo { font-size: .72rem; font-weight: 900; letter-spacing: 2px; }
 .podcast-capa-centro { display: flex; align-items: center; justify-content: space-between; }
