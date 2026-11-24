@@ -8,6 +8,7 @@
     <title>Descarte correto | Bituca Zero</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/descarte.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
     <a class="atalho-conteudo" href="#conteudo">Pular para o conteúdo principal</a>
@@ -96,6 +97,70 @@
                 </div>
             </div>
         </section>
+
+        <section class="secao mapa-coleta" id="pontos-coleta">
+            <div class="container">
+                <div class="secao-cabecalho">
+                    <div>
+                        <p class="sobretitulo">ONDE DESCARTAR</p>
+                        <h2>Pontos de coleta de <em>bitucas.</em></h2>
+                    </div>
+                    <p>O mapa destaca iniciativas documentadas no ABC Paulista e em São Paulo. Como alguns projetos são pilotos ou podem mudar, confirme se o coletor continua disponível antes de se deslocar.</p>
+                </div>
+
+                <div class="mapa-layout">
+                    <div class="mapa-caixa">
+                        <div id="mapa-bitucas" role="application" aria-label="Mapa de iniciativas de coleta de bitucas no ABC Paulista e na cidade de São Paulo"></div>
+                        <p class="mapa-legenda"><span class="legenda-abc"></span> ABC Paulista <span class="legenda-sp"></span> São Paulo (capital)</p>
+                    </div>
+                    <div class="mapa-lista">
+                        <article class="local-coleta local-destaque">
+                            <span class="local-selo">ABC PAULISTA · REGISTRO HISTÓRICO</span>
+                            <h3>Paço Municipal de Santo André</h3>
+                            <p>Praça IV Centenário, Centro — Santo André (SP). Em outubro de 2017, a Prefeitura anunciou dez coletores instalados em parceria com a Poiato Recicla. A notícia documenta o projeto-piloto, mas não confirma que os coletores continuam no local atualmente.</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Pa%C3%A7o+Municipal+Santo+Andr%C3%A9+Pra%C3%A7a+IV+Centen%C3%A1rio" target="_blank" rel="noopener">Ver localização no mapa</a>
+                            <a href="https://web.santoandre.sp.gov.br/portal/noticias/0/3/11644/paco-municipal-ganha-coletores-de-residuos-de-cigarro-para-reciclagem" target="_blank" rel="noopener">Consultar notícia da Prefeitura</a>
+                        </article>
+                        <article class="local-coleta">
+                            <span class="local-selo">SÃO PAULO · INICIATIVA DOCUMENTADA EM 2024</span>
+                            <h3>Largo do Arouche</h3>
+                            <p>Centro de São Paulo. A Progen informou que havia coletores em frente ao seu escritório, em projeto com a Poiato Recicla iniciado em agosto de 2024. Confirme a permanência do coletor.</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Largo+do+Arouche+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver localização no mapa</a>
+                            <a href="https://www.progen.com.br/progen-evita-que-mais-de-580-litros-de-agua-sejam-contaminados/" target="_blank" rel="noopener">Consultar informações do projeto</a>
+                        </article>
+                        <article class="local-coleta">
+                            <span class="local-selo">SÃO PAULO · REGISTRO 2023–2024</span>
+                            <h3>Praça Província de Saitama</h3>
+                            <p>Alto de Pinheiros, São Paulo. A associação de moradores informou a instalação de cinco caixas de coleta geridas pela Poiato Recicla; seu relatório de atividades de 2024 registrou a continuidade da iniciativa.</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a+Prov%C3%ADncia+de+Saitama+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver localização no mapa</a>
+                            <a href="https://www.saap.org.br/provincia-de-saitama-recebe-novos-equipamentos-para-coleta-e-reciclagem-de-bituca-de-cigarro/" target="_blank" rel="noopener">Consultar informações da associação</a>
+                        </article>
+                    </div>
+                </div>
+</div>
+        </section>
+
+        <section class="secao fundo-claro reciclagem-bitucas">
+            <div class="container duas-colunas">
+                <div>
+                    <p class="sobretitulo">DO RESÍDUO À MATÉRIA-PRIMA</p>
+                    <h2>Uma empresa transforma bitucas em <em>papel.</em></h2>
+                    <p>A <strong>Poiato Recicla</strong> é uma empresa brasileira especializada na coleta e reciclagem de resíduos de cigarro. A iniciativa começou em 2010 e utiliza tecnologia desenvolvida pela Universidade de Brasília (UnB), licenciada à empresa.</p>
+                    <p>Depois de recolhidas em coletores específicos, as bitucas são encaminhadas à usina em Votorantim (SP). Lá, passam por triagem, tratamento e descontaminação. O processo recupera uma massa celulósica que pode ser usada na produção de papel artesanal, papel machê e peças de artesanato.</p>
+                    <p>O material reciclado também pode apoiar oficinas e projetos sociais, dando uma nova utilidade a um resíduo que, quando descartado incorretamente, pode contaminar o solo e a água.</p>
+                    <a class="botao botao-reciclagem" href="https://poiatorecicla.com.br/" target="_blank" rel="noopener">Conheça a Poiato Recicla</a>
+                </div>
+                <div class="painel reciclagem-painel">
+                    <h3>Como funciona o processo?</h3>
+                    <ol class="etapas-reciclagem">
+                        <li><strong>Coleta específica</strong><span>As bitucas são depositadas em caixas próprias.</span></li>
+                        <li><strong>Tratamento e descontaminação</strong><span>O material passa por etapas de processamento para retirar contaminantes.</span></li>
+                        <li><strong>Recuperação da massa celulósica</strong><span>O resíduo tratado é convertido em matéria-prima.</span></li>
+                        <li><strong>Novos produtos</strong><span>A massa pode virar papel artesanal, papel machê e artesanato.</span></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="rodape">
         <div class="container rodape_interno">
@@ -159,6 +224,31 @@
             </defs>
         </svg>
     </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elemento = document.getElementById("mapa-bitucas");
+            if (!elemento || typeof L === "undefined") return;
+            const mapa = L.map(elemento, { scrollWheelZoom: false }).setView([-23.59, -46.63], 10);
+            L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+            }).addTo(mapa);
+            const locais = [
+                {coords: [-23.6565, -46.5313], titulo: "Paço Municipal de Santo André", detalhe: "ABC Paulista — coletores anunciados em projeto-piloto de 2017. Disponibilidade atual não confirmada.", url: "https://www.google.com/maps/search/?api=1&query=Pa%C3%A7o+Municipal+Santo+Andr%C3%A9"},
+                {coords: [-23.5398, -46.6445], titulo: "Largo do Arouche", detalhe: "São Paulo — iniciativa da Progen com a Poiato Recicla documentada em 2024. Confirme se o coletor permanece.", url: "https://www.google.com/maps/search/?api=1&query=Largo+do+Arouche+S%C3%A3o+Paulo"},
+                {coords: [-23.5467, -46.7127], titulo: "Praça Província de Saitama", detalhe: "Alto de Pinheiros, São Paulo — coletores documentados em 2023 e no relatório de atividades de 2024.", url: "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a+Prov%C3%ADncia+de+Saitama+S%C3%A3o+Paulo"}
+            ];
+            locais.forEach(function (local, indice) {
+                L.circleMarker(local.coords, {
+                    radius: indice === 0 ? 9 : 7,
+                    color: indice === 0 ? "#d97732" : "#315b3b",
+                    fillColor: indice === 0 ? "#f2a15e" : "#6f9b73",
+                    fillOpacity: 0.9,
+                    weight: 2
+                }).addTo(mapa).bindPopup("<strong>" + local.titulo + "</strong><br>" + local.detalhe + '<br><a href="' + local.url + '" target="_blank" rel="noopener">Abrir no Google Maps</a>');
+            });
+        });
+    </script>
     <script src="js/menu.js" defer></script>
     <script src="js/acessibilidade.js" defer></script>
 </body>
