@@ -481,7 +481,6 @@ html.alto-contraste .midia-card {
     border-radius: 19px;
     color: #fff;
     background:
-        radial-gradient(circle at 82% 18%, rgba(242,154,56,.95) 0 5%, transparent 5.5%),
         linear-gradient(145deg, #47734c 0%, var(--verde, #315b3b) 48%, var(--verde-escuro, #203f2a) 100%);
 }
 .bz-podcast-etiqueta,
