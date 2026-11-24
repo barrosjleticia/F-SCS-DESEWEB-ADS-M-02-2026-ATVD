@@ -2,7 +2,7 @@
 Projeto de Desenvolvimento Web - Fatec
 # Bituca Zero — Bituca no lugar certo 🚬
 
-## 🌱 Sobre o projeto
+## Sobre o projeto
 
 O **Bituca Zero** é um projeto desenvolvido como parte da disciplina de Desenvolvimento Web, do curso de Análise e Desenvolvimento de Sistemas (ADS), da FATEC Antonio Russo.
 
