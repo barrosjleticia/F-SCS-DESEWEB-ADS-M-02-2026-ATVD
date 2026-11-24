@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#315b3b">
     <title>Descarte correto | Bituca Zero</title>
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <link rel="stylesheet" href="css/descarte.css">
 </head>
 <body>
@@ -74,6 +75,28 @@
                         <h3>Não descarte na natureza</h3>
                         <p>Chão, vasos de plantas, praias, bueiros e cursos d’água não são locais adequados para esse resíduo.</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao" id="pontos-de-coleta">
+            <div class="container">
+                <div class="secao-cabecalho">
+                    <div>
+                        <p class="sobretitulo">ONDE DESCARTAR</p>
+                        <h2>Pontos de <em>coleta de bitucas.</em></h2>
+                    </div>
+                    <p>Escolha um local na lista para ver a posição no mapa. Localizações aproximadas: confirme com o estabelecimento antes de ir.</p>
+                </div>
+                <div class="mapa-grade">
+                    <ol class="pontos-lista" id="pontos-lista" aria-label="Lista de pontos de coleta"></ol>
+                    <div class="mapa-caixa">
+                        <div id="mapa-pontos" role="region" aria-label="Mapa com os pontos de coleta de bitucas"></div>
+                        <p class="mapa-ajuda nota">
+                            <span>Conhece um ponto de coleta? <a href="participe.html">Conte para a gente</a>.</span>
+                            <button type="button" id="mapa-todos">Ver todos os pontos</button>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -159,6 +182,8 @@
             </defs>
         </svg>
     </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/pontos-coleta.js" defer></script>
     <script src="js/menu.js" defer></script>
     <script src="js/acessibilidade.js" defer></script>
 </body>
