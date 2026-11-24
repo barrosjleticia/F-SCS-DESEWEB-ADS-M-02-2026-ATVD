@@ -1,4 +1,3 @@
-/* ===== Estilos desta página (antes ficavam em base.css) ===== */
 /* Componentes das páginas internas do Bituca Zero */
 .grade-cartoes {
     display: grid;
@@ -89,3 +88,67 @@ html.alto-contraste .missao-card {
     color: #fff !important;
     border-color: #fff;
 }
+
+/* ===== Valores: cartões verdes ===== */
+.grade-valores {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+.cartao-valor {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 26px 32px;
+    border: 0;
+    border-radius: 22px;
+    background: linear-gradient(160deg, var(--verde) 0%, var(--verde-escuro) 100%);
+    box-shadow: var(--sombra);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.cartao-valor::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 0;
+    width: 44px;
+    height: 5px;
+    border-radius: 0 0 6px 6px;
+    background: var(--laranja);
+}
+.cartao-valor>span {
+    display: block;
+    margin: 14px 0 22px;
+    color: var(--laranja-numero);
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0;
+}
+.cartao-valor h3 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 1.25rem;
+}
+.cartao-valor p {
+    color: var(--texto-sobre-escuro);
+    font-size: 0.9375rem;
+}
+@media (hover: hover) {
+    .cartao-valor:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 50px rgba(32, 63, 42, 0.22);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cartao-valor { transition: none; }
+    .cartao-valor:hover { transform: none; }
+}
+@media (max-width: 1000px) {
+    .grade-valores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .grade-valores { grid-template-columns: 1fr; }
+}
+html.alto-contraste .cartao-valor { background: #000 !important; }
+html.alto-contraste .cartao-valor h3,
+html.alto-contraste .cartao-valor p,
+html.alto-contraste .cartao-valor>span { color: #fff !important; }
