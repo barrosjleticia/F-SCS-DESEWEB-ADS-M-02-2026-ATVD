@@ -621,3 +621,75 @@ html.alto-contraste .midia-card {
     .bz-podcast-pulos { flex-wrap: wrap; }
     .bz-podcast-velocidade { justify-content: space-between; }
 }
+
+
+/* Ajuste compacto do podcast: sem capa em quadrado e com destaque tipográfico. */
+.bz-podcast-secao {
+    padding-block: clamp(42px, 5vw, 66px);
+}
+.bz-podcast-topo {
+    max-width: 760px;
+    margin-bottom: 26px;
+}
+.bz-podcast-topo h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.65rem);
+    letter-spacing: -1px;
+}
+.bz-podcast-topo > p:last-child {
+    font-size: .98rem;
+    line-height: 1.6;
+}
+.bz-podcast-card {
+    display: block;
+    max-width: 920px;
+    padding: clamp(22px, 3vw, 32px);
+    border-radius: 20px;
+}
+.bz-podcast-conteudo {
+    max-width: 100%;
+}
+.bz-podcast-identificacao {
+    display: inline-block;
+    margin: 0 0 12px;
+    color: var(--verde, #315b3b);
+    font-size: .78rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.bz-podcast-numero {
+    margin-bottom: 8px;
+    font-size: .7rem;
+}
+.bz-podcast-conteudo h3 {
+    max-width: 760px;
+    margin-bottom: 9px;
+    font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+}
+.bz-podcast-descricao {
+    margin-bottom: 18px;
+    font-size: .96rem;
+    line-height: 1.55;
+}
+.bz-podcast-conteudo audio {
+    margin-bottom: 14px;
+}
+.bz-podcast-controles {
+    gap: 12px;
+}
+.bz-podcast-botao {
+    min-height: 39px;
+    padding: 7px 13px;
+    font-size: .84rem;
+}
+.bz-podcast-velocidade select {
+    min-height: 39px;
+}
+.bz-podcast-transcricao {
+    margin-top: 17px;
+    padding-top: 14px;
+}
+@media (max-width: 760px) {
+    .bz-podcast-card {
+        padding: 22px;
+    }
+}
