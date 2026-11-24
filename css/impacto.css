@@ -95,3 +95,36 @@ html.alto-contraste .cartao-info {
     color: #fff !important;
     border-color: #fff;
 }
+
+/* ===== Painel marrom (mesmo design dos cartões de Objetivos) ===== */
+.painel-marrom {
+    position: relative;
+    overflow: hidden;
+    padding: 36px 32px 34px;
+    border: 0;
+    background: linear-gradient(160deg, var(--marrom) 0%, var(--marrom-escuro) 100%);
+    box-shadow: 0 18px 45px rgba(53, 34, 23, 0.14);
+    color: #eadccf;
+}
+.painel-marrom::before {
+    content: "";
+    position: absolute;
+    left: 32px;
+    top: 0;
+    width: 44px;
+    height: 5px;
+    border-radius: 0 0 6px 6px;
+    background: var(--laranja);
+}
+.painel-marrom h3 {
+    color: #fff;
+}
+.painel-marrom .lista-destaque li {
+    color: #eadccf;
+}
+.painel-marrom .lista-destaque li::marker {
+    color: var(--laranja-numero);
+}
+html.alto-contraste .painel-marrom { background: #000 !important; }
+html.alto-contraste .painel-marrom h3,
+html.alto-contraste .painel-marrom li { color: #fff !important; }
