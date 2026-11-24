@@ -257,7 +257,25 @@ html.alto-contraste .passo {
     #mapa-bitucas {
         height: 175px;
     }
+html body main .reciclagem-bitucas .container .painel.reciclagem-painel {
+    background: #315b3b !important;
+    background-color: #315b3b !important;
+    color: #ffffff !important;
+    border: 1px solid #203f2a !important;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 16px 38px rgba(32, 63, 42, .16);
+}
 
+html body main .reciclagem-bitucas .reciclagem-painel h3,
+html body main .reciclagem-bitucas .reciclagem-painel strong,
+html body main .reciclagem-bitucas .reciclagem-painel span {
+    color: #ffffff !important;
+}
+
+html body main .reciclagem-bitucas .reciclagem-painel li::before {
+    color: #ffd0a7 !important;
+}
     .reciclagem-painel {
         padding: 22px;
     }
