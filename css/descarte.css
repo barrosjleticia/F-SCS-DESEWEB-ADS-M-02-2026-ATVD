@@ -135,7 +135,25 @@ html.alto-contraste .passo {
     font-size: .78rem;
     font-weight: 700;
 }
-.reciclagem-painel { align-self: stretch; }
+.reciclagem-painel {
+    align-self: stretch;
+    background: var(--verde);
+    border: 1px solid var(--verde-escuro);
+    color: #fff;
+    box-shadow: 0 16px 38px rgba(32, 63, 42, .16);
+}
+.reciclagem-painel h3 {
+    color: #fff;
+}
+.reciclagem-painel .etapas-reciclagem li::before {
+    color: #ffd0a7;
+}
+.reciclagem-painel .etapas-reciclagem strong {
+    color: #fff;
+}
+.reciclagem-painel .etapas-reciclagem span {
+    color: rgba(255, 255, 255, .88);
+}
 .etapas-reciclagem {
     margin: 0;
     padding: 0;
